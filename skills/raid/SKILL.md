@@ -54,9 +54,9 @@ Steps, in order:
    - Product name and a one-line description.
    - Who hurts without it, and what they've actually said about the problem — in their own words, not the product's.
    - Where those people already gather — forums, subreddits, newsletters, local meetups, anywhere with a name.
-   - Named incumbents or competitors worth researching. (These names are research targets only — see the rule below.)
+   - Named incumbents or competitors worth researching, and — exactly as you'd ask for a canonical source — their pricing or plans page URL where the adopter already knows it. (These names are research targets only — see the rule below.)
 
-2. **Fetch public sources.** Use WebSearch to find where the pains above show up in public and to confirm the rooms named actually exist and are active. Use WebFetch on each incumbent's pricing or plans page to determine how they make money. A pain or room the adopter names but that can't be found or confirmed publicly still goes in the pack — mark it `verified: no` rather than dropping it or inventing a source for it.
+2. **Fetch public sources.** Use WebSearch to find where the pains above show up in public and to confirm the rooms named actually exist and are active. For each incumbent: if the adopter supplied a URL, WebFetch it directly. If not, WebSearch for the incumbent's own site and locate its own pricing or plans page there, then WebFetch that page. **A third-party summary, review site, or comparison page is not an acceptable source for what a competitor charges** — go to the incumbent's own page, or treat it as not found. A pain or room the adopter names but that can't be found or confirmed publicly still goes in the pack — mark it `verified: no` rather than dropping it or inventing a source for it. An incumbent whose own pricing page can't be located the same way goes into `asymmetry.md` with `revenue model: unknown — not verified` — never a guessed or inferred model. Guessing the revenue model is inventing the very claim this skill exists to source: the whole asymmetry method collapses if the model is wrong.
 
 3. **Write `.monkeys/recon.md`** (adopter's repo root), in exactly this shape — this is a contract `raid-recon` and every other sibling reads:
 
