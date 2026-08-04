@@ -46,7 +46,7 @@ State this plainly before starting, and mean it: **nothing here is pre-filled.**
 Two roots are in play throughout these steps:
 
 - **Plugin root** — where this plugin is installed. Address it with `${CLAUDE_PLUGIN_ROOT}`; the capability report in section 5 reads `companions.json` from here.
-- **Adopter's repo root** — the directory you are working in. Both files you *write* — `.monkeys/recon.md`, `.monkeys/asymmetry.md` — are relative to it.
+- **Adopter's repo root** — the directory you are working in. Every file you *write* — `.monkeys/recon.md`, `.monkeys/asymmetry.md`, and `.monkeys/scars.md` if it is absent — is relative to it.
 
 Steps, in order:
 
@@ -84,7 +84,18 @@ Steps, in order:
 
    **This file is internal ammunition and is never published.** Naming a rival in public copy — anywhere a stranger can read it — is a `FORTRESS` violation. It exists to sharpen private judgment about where to stand, not to write attack copy.
 
-5. **Report back** what was written, and state plainly that every pain traces to something the adopter said or something independently found in public, and every asymmetry claim traces to a fetched pricing or plans page — nothing was invented to fill space.
+5. **Write `.monkeys/scars.md` — only if it does not already exist** (adopter's repo root). The adopter's own incident log, started empty: a three-column table plus one line stating it gets filled in after something actually happens, never guessed in advance. If the file is already there, leave it exactly as it is and say so in the report — `FORTRESS` writes this same file where it is installed, and an existing log is someone's real history, not a template to overwrite. This is the adopter's own log, separate from RAID's own `scars.md`, which documents this plugin's history and not theirs.
+
+   ```markdown
+   # Scars — what we learned the hard way
+
+   | Incident | Damage | Rule |
+   |---|---|---|
+
+   Filled in after something actually happens. Never guessed in advance.
+   ```
+
+6. **Report back** what was written, and state plainly that every pain traces to something the adopter said or something independently found in public, and every asymmetry claim traces to a fetched pricing or plans page — nothing was invented to fill space.
 
 ## 5. Capability report
 

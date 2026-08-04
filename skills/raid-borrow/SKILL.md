@@ -17,9 +17,15 @@ Check `.monkeys/recon.md` for rooms already identified, including their rules an
 
 ## 2. The exchange has to be real
 
-You are borrowing, not renting free of charge. The rent is usefulness, and it's paid **in advance** — before you ask the room for anything, not after. A first appearance that opens with a pitch has the exchange backwards: it asks the room to extend credit to a stranger. Show up useful first; let any mention of what you're building be the audience's own conclusion, not your opening line.
+You are borrowing, not renting free of charge. The rent is usefulness, and it's paid **in advance** — before you ask the room for anything, not after. A first appearance that opens with a pitch has the exchange backwards: it asks the room to extend credit to a stranger. Show up useful first; let any mention of what you're building be the audience's own conclusion, not your opening line. That is about **ordering, not concealment** — when you do mention it, the first rule below binds in the same breath.
 
-## 3. Hard rule
+## 3. Hard rules
+
+**Disclose the connection.** If you have a material connection to what you mention — you build it, you're paid by it, you hold a stake in it — say so plainly the first time you mention it, in the same message. Not in a profile bio, not in a reply three comments down, not left for someone to work out. "I build this" costs nothing and is the entire difference between participation and astroturfing. Undisclosed promotion by someone with a stake is not merely a norm the room happens to hold; in several jurisdictions it is a regulatory matter, and the room will find out either way — the archive of your own posts is the evidence.
+
+**One account per person per platform.** Never create a second account to agree with yourself, upvote yourself, vouch for your own product, or manufacture the appearance of consensus. This is bannable on effectively every platform that has rules at all, and it is fraud on the room whether or not the platform catches it. There is no small version of this. One sock puppet discovered retroactively discredits every honest post the main account ever made.
+
+**No copy-paste across rooms.** The same message pasted into ten communities is spam regardless of how useful the message is. Usefulness is not a defence — the duplicate is visible to anyone who looks, and mods look. If a thing is worth saying in a room, it is worth writing for that room, in that room's terms, answering that room's version of the question.
 
 **Borrowing is not extraction.** A room you take from and never give back to stops lending — the mods notice, the regulars notice, and the welcome that took real effort to earn evaporates in one visible instance of taking without giving. This isn't a one-time cost; it's a standing you either build or spend down with every appearance.
 

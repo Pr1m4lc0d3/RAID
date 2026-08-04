@@ -6,13 +6,14 @@ RAID is the offensive half of **THE MAVERICK'S MONKEYS** — a pair of Claude Co
 together make an agent competent at marketing a product with no budget. The taijitu splits across
 the two: `RAID` is yang, light and initiating; `FORTRESS` is yin, dark and holding. Side by side the
 two halves close into one circle — a raiding party with nowhere to fall back gets hunted down, and a
-fortress that never raids starves. Neither half is complete alone, and neither half is pure: `RAID`
+fortress that never raids starves. Neither half is the *whole doctrine*, and neither half is pure: `RAID`
 carries restraint (the loudest play is the one most likely to get you banned), `FORTRESS` carries
 aggression (an asset you never spend is hoarding, not strategy).
 
 **`FORTRESS` is released.** It ships standalone — every skill in it runs without RAID installed.
 This repository ships `RAID`, the other half of the pair: where `FORTRESS` holds ground, `RAID`
-takes it. Each plugin is a complete, independently useful tool on its own; together they are one war
+takes it. Each plugin is a complete, independently useful tool on its own — installed alone, either
+one does its whole job. What neither does alone is the full doctrine: together they are one war
 doctrine split by function.
 
 Both halves answer to the same domain: guerrilla marketing, as Levinson defined it in 1984 —
@@ -62,13 +63,13 @@ would be exactly the overclaiming this whole system exists to refuse.
 
 | Skill | Job |
 |---|---|
-| **`raid`** | Front door: doctrine, the target gate, one-time kickoff that generates a recon-and-asymmetry pack (`.monkeys/recon.md`, `.monkeys/asymmetry.md`) from the adopter's own product and market, capability report, routing to the six skills below. |
-| **`raid-recon`** | Who hurts, captured in their own words, and where they gather. Records a room's rules and entry cost, not just its audience size — and marks anything unconfirmed `verified: no` rather than dropping it or guessing at it. |
+| **`raid`** | Front door: doctrine, the target gate, one-time kickoff that generates a recon-and-asymmetry pack (`.monkeys/recon.md`, `.monkeys/asymmetry.md`, plus an empty `.monkeys/scars.md` where none exists yet) from the adopter's own product and market, capability report, routing to the six skills below. |
+| **`raid-recon`** | Who hurts, captured in their own words, and where they gather. Records a room's rules and entry cost, not just its audience size — and marks anything unconfirmed `verified: no` rather than dropping it or guessing at it. Captured quotes are internal research, never republished as copy and never attributed to a named person in public. |
 | **`raid-asymmetry`** | Reads an incumbent's own revenue model from their own pricing or plans page and derives what that model structurally forbids them to say. Internal ammunition only — `asymmetry.md` is never published, and naming a rival in public copy is a `FORTRESS` violation. |
-| **`raid-stunt`** | The disproportionate play, filtered by the carry test: name the person who repeats it and why repeating it serves them, or don't build it. Rejects plays that insult the audience they need, would embarrass if they worked, or require a budget to be noticed. |
+| **`raid-stunt`** | The disproportionate play, filtered by the carry test: name the person who repeats it and why repeating it serves them, or don't build it. Holds a hard floor first — nothing unlawful, no hoaxes or impersonation, nothing that could read as a real emergency, no breach of a platform's terms — then rejects plays that insult the audience they need, would embarrass if they worked, or require a budget to be noticed. |
 | **`raid-moment`** | Ambush timing: rides attention already in motion instead of manufacturing it, refuses to ride a tragedy, and lets a moment pass rather than publish an unverified claim to catch it. |
-| **`raid-borrow`** | Finds a room that already has an audience and pays for standing in it with usefulness offered in advance — never a drop-and-pitch. |
-| **`raid-multiply`** | Cuts one substantial asset into many standalone pieces. Every cut has to make sense on its own, with no assumed context from the source. Decides and drafts the cuts; rendering is the last mile and needs no specific tool. |
+| **`raid-borrow`** | Finds a room that already has an audience and pays for standing in it with usefulness offered in advance — never a drop-and-pitch. Discloses a material connection in the same message it's mentioned, one account per person per platform, and nothing copy-pasted across rooms. |
+| **`raid-multiply`** | Cuts one substantial asset into many standalone pieces. Every cut has to make sense on its own, with no assumed context from the source. A cut inherits the source's licence, rights and consent. Decides and drafts the cuts; rendering is the last mile and needs no specific tool. |
 
 ## Install
 
@@ -80,7 +81,8 @@ would be exactly the overclaiming this whole system exists to refuse.
 Or point the marketplace command at wherever this repository is checked out locally
 (`.claude-plugin/marketplace.json` at the repo root). Then, on the target repo, invoke `raid` to
 run kickoff — it interviews the adopter about their own product and market and generates the
-`.monkeys/recon.md` and `.monkeys/asymmetry.md` pack from scratch. Nothing ships pre-filled; a
+`.monkeys/recon.md` and `.monkeys/asymmetry.md` pack from scratch, and starts an empty
+`.monkeys/scars.md` if that repo doesn't already have one. Nothing ships pre-filled; a
 template with plausible-looking example pains or competitors would be exactly the invented-evidence
 problem RAID exists to avoid.
 
