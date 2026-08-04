@@ -30,6 +30,8 @@ Some plays are not raids at all, whatever they would achieve. Reject these befor
 
 Underneath all four: **disproportion is not a licence.** The gate asks whether a play is disproportionate. It does not ask whether it is permitted — that is a separate question with its own answer, and a play has to pass both. A play that clears the carry test and fails this floor is not a good raid with a problem attached; it is not a raid.
 
+And nothing here ships on the agent's own say-so: **`raid` stages, it never publishes.** A stunt is designed, written up, and handed to a person to run. This floor is enforced by your own judgement at the exact moment you most want the play to work, which is precisely why someone else has to look at it before anything happens in public.
+
 ## 3. Failure modes
 
 Reject a stunt design if it matches any of these:

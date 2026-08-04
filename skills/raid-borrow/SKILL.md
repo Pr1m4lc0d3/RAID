@@ -25,11 +25,13 @@ You are borrowing, not renting free of charge. The rent is usefulness, and it's 
 
 **One account per person per platform.** Never create a second account to agree with yourself, upvote yourself, vouch for your own product, or manufacture the appearance of consensus. This is bannable on effectively every platform that has rules at all, and it is fraud on the room whether or not the platform catches it. There is no small version of this. One sock puppet discovered retroactively discredits every honest post the main account ever made.
 
-**No copy-paste across rooms.** The same message pasted into ten communities is spam regardless of how useful the message is. Usefulness is not a defence — the duplicate is visible to anyone who looks, and mods look. If a thing is worth saying in a room, it is worth writing for that room, in that room's terms, answering that room's version of the question.
+**No copy-paste across rooms — and no ten variants of one message either.** The same message pasted into ten communities is spam regardless of how useful the message is, and rewriting the opening line ten times is the same spam with more steps. The test is not the text; it is the intent. **If you are writing for ten rooms at once, you are not participating in any of them.** Write for a room because you have something specific to say *there* — to that room's version of the question, in that room's terms, prompted by something actually said in it. If you have nothing specific to say to a room, that room is not a target yet; it is a room you wanted access to. Usefulness is not a defence here, and neither is variation.
 
 **Borrowing is not extraction.** A room you take from and never give back to stops lending — the mods notice, the regulars notice, and the welcome that took real effort to earn evaporates in one visible instance of taking without giving. This isn't a one-time cost; it's a standing you either build or spend down with every appearance.
 
 And the standing itself: **it belongs to the room, not to you.** A good answer in someone else's community, a good guest appearance, a contribution people liked — none of it is portable in the way owned channels are. You don't get to take that goodwill and redeploy it as leverage against the room later, and you don't get to assume it transfers to a different room. Where `FORTRESS` is installed, `fortress-standing` governs what an account has actually earned in a given room and what it hasn't — read it before assuming a good showing in one room buys anything in another.
+
+**And you don't post it — a human does.** Everything this skill produces is a draft for a person to send: the answer, the comment, the guest pitch, the contribution. `raid`'s staging rule binds hardest here, because this is the skill whose output goes straight into someone else's room, where every rule above is enforced by people who did not invite you and owe you nothing.
 
 ## 4. What this doesn't decide
 

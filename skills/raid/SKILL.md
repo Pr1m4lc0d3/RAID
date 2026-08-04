@@ -21,7 +21,19 @@ A stunt nobody carries is just a weird thing you did.
 
 Guerrilla marketing's whole trade is disproportion: a small input that produces an outsized effect because someone else carries the message for free. That is not a bonus feature — it is the corollary that keeps this discipline from tipping into vandalism, prank content, or noise nobody asked for. Before committing effort to any play, ask what the gate below asks in full: *if this works, who repeats it, and why is repeating it in their interest?* If the honest answer is nobody, don't build it. Working out exactly why, and what to build instead, is `raid-stunt`'s job — the front door only filters at the door.
 
-## 3. The target gate
+## 3. RAID never publishes. It stages.
+
+RAID produces drafts, plans, target lists, cuts and copy. It does not post, comment, submit, send, or publish, and it does not perform an outward action on anyone's behalf. Every outward action is a human's, taken deliberately, with the material in front of them.
+
+**The output of any RAID skill is something a human sends, not something the agent sends.** Hand over a paste block, a draft, a list, a shot list — never a completed action. "I posted it" is outside the scope of every skill in this plugin. "Here is the post, here is the room, here is the rule you are subject to there" is the finished deliverable, not a partial one.
+
+This is doctrine, not a limitation, and it is not a capability gap waiting to be closed. Handing a human a paste block requires no tools at all, which is exactly why it works on built-ins alone — there is nothing to install, nothing to authorise, and nothing to wait for.
+
+The reason is worth stating plainly, because it is what makes the rest of this plugin hold. **Every floor in RAID — the conduct rules, the legality floor, the naming rule, the consent rule — is enforced by the agent's own judgement, at the moment that judgement is under the most pressure to produce a result.** That is the worst possible moment for it to be the only check. A human between the draft and the send is the one check that does not share the pressure. The floors reduce the damage an agent can do; the gate is what makes them hold.
+
+Where `FORTRESS` is installed, `fortress-gate` owns this and RAID defers to it. Where it is not installed, **this rule still binds.** It is RAID's own rule, not one borrowed from a plugin that may not be there.
+
+## 4. The target gate
 
 Before committing effort to any play, run this gate in order:
 
@@ -34,10 +46,11 @@ Before committing effort to any play, run this gate in order:
 | Is attention already in motion I can ride instead of manufacturing? | `raid-moment` |
 | Does this room already have the audience, so I don't have to build one? | `raid-borrow` |
 | Does this asset already exist in another form? | `raid-multiply` |
+| Is this a draft a **human** sends — or am I about to send it myself? If I am sending, stop. | `raid` |
 
-*If nothing carries it and nothing is disproportionate, it is not a raid — it is just work.*
+*If nothing carries it and nothing is disproportionate, it is not a raid — it is just work. And if the agent is the one hitting send, it is not a raid either — it is an unreviewed action taken in someone else's name.*
 
-## 4. Kickoff
+## 5. Kickoff
 
 Run this once, the first time RAID is adopted into a repo. If `.monkeys/recon.md` or `.monkeys/asymmetry.md` already exists, don't overwrite silently — read what's there back to the adopter and ask whether to extend it or start over.
 
@@ -45,7 +58,7 @@ State this plainly before starting, and mean it: **nothing here is pre-filled.**
 
 Two roots are in play throughout these steps:
 
-- **Plugin root** — where this plugin is installed. Address it with `${CLAUDE_PLUGIN_ROOT}`; the capability report in section 5 reads `companions.json` from here.
+- **Plugin root** — where this plugin is installed. Address it with `${CLAUDE_PLUGIN_ROOT}`; the capability report in section 6 reads `companions.json` from here.
 - **Adopter's repo root** — the directory you are working in. Every file you *write* — `.monkeys/recon.md`, `.monkeys/asymmetry.md`, and `.monkeys/scars.md` if it is absent — is relative to it.
 
 Steps, in order:
@@ -97,13 +110,13 @@ Steps, in order:
 
 6. **Report back** what was written, and state plainly that every pain traces to something the adopter said or something independently found in public, and every asymmetry claim traces to a fetched pricing or plans page — nothing was invented to fill space.
 
-## 5. Capability report
+## 6. Capability report
 
 Read `companions.json` at the plugin root. For each entry, check the filesystem for whether its provider is already available, and report the result **by capability**, not by tool name — never the name of a specific package or service. Offer to install a missing one only when the adopter explicitly consents; never install anything silently.
 
 As shipped, `companions.json` is empty — RAID needs no add-ons to produce any of its deliverables. Report exactly: **"No optional capabilities needed — RAID runs entirely on built-in tools."** If a future entry is ever added, report it as an available accelerant, never as a missing requirement — every RAID skill produces its full deliverable without one.
 
-## 6. Routing table
+## 7. Routing table
 
 | Moment | Skill |
 |---|---|
@@ -115,12 +128,12 @@ As shipped, `companions.json` is empty — RAID needs no add-ons to produce any 
 | Looking for an audience, or considering a podcast, newsletter, or community | `raid-borrow` |
 | Having made one asset, planning content, or wanting more output without more work | `raid-multiply` |
 
-## 7. The pairing
+## 8. The pairing
 
 RAID takes ground; `FORTRESS` holds it and governs what may be claimed. The two are one doctrine split by function, not two unrelated systems that happen to share a repo owner.
 
 RAID is fully usable alone — every skill it routes to produces its complete deliverable on RAID's own pack, with no dependency on FORTRESS being installed. But where FORTRESS **is** present, its claim discipline binds every RAID output without exception. **A stunt is not exempt from the truth register.** The loudest play RAID can design is exactly the one most likely to be checked, screenshotted, and quoted back — and `fortress-truth` grants no carve-out for something that worked.
 
-## 8. Built-ins only
+## 9. Built-ins only
 
 Every skill in this plugin — this one and all six it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 5's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function.
