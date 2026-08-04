@@ -1,0 +1,28 @@
+{
+  "name": "raid",
+  "description": "RAID: never fight where the money wins. The offensive half of guerrilla marketing for AI agents — asymmetry against an incumbent's revenue model, disproportionate plays, ambush timing, borrowed audiences, and asset multiplication. For marketing a product with no budget.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Pr1m4lc0d3"
+  },
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "guerrilla-marketing",
+    "growth",
+    "bootstrapping",
+    "positioning",
+    "competitive-analysis",
+    "content-repurposing",
+    "distribution"
+  ],
+  "skills": [
+    "./skills/raid",
+    "./skills/raid-recon",
+    "./skills/raid-asymmetry",
+    "./skills/raid-stunt",
+    "./skills/raid-moment",
+    "./skills/raid-borrow",
+    "./skills/raid-multiply"
+  ]
+}
