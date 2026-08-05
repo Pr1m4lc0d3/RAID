@@ -9,13 +9,27 @@ Never fight where the money wins. This skill turns that doctrine into a sequence
 
 ## 1. What this does
 
-Read whatever `.monkeys/` files exist — `truth.md`, `motte.md`, `bailey.md`, `recon.md`, `asymmetry.md`, `scars.md`, `numbers.md`, and any prior files under `.monkeys/briefings/` — and from what they actually say, work out which of five stages is open. Write that to `campaign.md`.
+Read whatever `.monkeys/` files exist — `truth.md`, `motte.md`, `bailey.md`, `recon.md`, `asymmetry.md`, `scars.md`, `numbers.md`, `sell-kit.md` where it is there at all, and any prior files under `.monkeys/briefings/` — and from what they actually say, work out which of five stages is open. Write that to `campaign.md`.
 
 `truth.md`, `motte.md`, and `bailey.md` are created empty by `raid`'s kickoff wherever they are absent, and where FORTRESS is installed its skills — `fortress-truth`, `fortress-motte`, `fortress-bailey` — own the discipline for them and fill them. Whoever arrives first creates the file; each plugin owns the discipline for its own files. This skill only reads them, and works the same with or without FORTRESS present: a missing file reads exactly the same as an empty one (see section 3). **Nothing here requires FORTRESS to be installed, and nothing here is unreachable without it** — a RAID-only adopter with one cleared fact in `truth.md` opens stage 1, because kickoff put the file there and asked them for the fact.
 
 **The plan is derived from the pack, never from a template.** There is no default week-one, week-two schedule waiting to be filled in with the adopter's name on it. If `recon.md` names one room and `truth.md` has one cleared fact, the campaign is one room and one fact — short, because that is what is actually true, not because less work was done. A campaign that reads the same for every adopter would mean the pack was never read. **If the pack is thin, the campaign is short. That is correct, not a failure to fix by inventing more.**
 
 Run this fresh at the start of a session, or whenever asked what comes next. Read the pack before answering — never answer from memory of a previous run; the pack may have changed since.
+
+### `sell-kit.md`, where there is one
+
+`.monkeys/sell-kit.md` is optional and most packs will not have one. `raid`'s kickoff writes it only where the adopter arrived with a Sell-Kit from Idea Forge Pro, and it holds that founder's own pre-build test: `The ask`, `PASS if`, `KILL if`, `By when`, `Commitment signal`, `Stop condition`, and what the test can and cannot prove.
+
+**Where the file is absent, nothing on this page changes.** It reads exactly as an empty one does — the same rule every other pack file is under — and the campaign is derived from the rest of the pack precisely as it is today. This is the normal case, not a degraded one.
+
+Where it is present, read it fresh on this run and take three things from it:
+
+- **`The ask`, `PASS if`, `KILL if` and `By when` become the campaign's first objective and its kill criteria — adopted, not paraphrased and not competed with.** A pre-build test is not something running alongside a guerrilla campaign; it *is* stages 1 through 3. The rooms entered, the artifact published, the link finally shared all exist to produce the answer that test is asking for. Name it in **Why this stage**, in the founder's own words: the ask, what passes, what kills, and by when. Then every bullet under **Open now** is the *open stage's* work toward that ask — the first one being whatever moves it furthest — and where stage 3 is what's open, `The ask` is itself that bullet, with `PASS if` and the `By when` date as its `done when:`. **The gates still bind.** A kit whose ask is "take a pre-order" does not open stage 3 for a founder standing on stage 1; it tells you what stage 1 is *for*, which is the opposite of a reason to skip it. **Never invent a parallel objective while a kit's ask sits unmet** — two objectives means the founder gets measured against whichever one is going better. And state `KILL if` next to the ask wherever the ask appears: a test that failed has to be recognisable as a kill, not as a reason to try harder for another month.
+- **`Commitment signal` defines what counts as a real row in `numbers.md`.** Where the kit says a commitment is a payment, a reply saying "great idea", a follow, and a mailing-list signup are not commitments — and stage 4's gate is not satisfied by counting them as if they were. The kit's definition is usually stricter than a founder's instinct in the moment it is being applied, which is exactly when it is worth honouring as written. **Never loosen it to make a row available.** State it in **Why this stage** with the objective, and again in stage 4's bullet under **Closed, and what opens it** while that stage is the closed one.
+- **`Stop condition` is carried into stage 4's pruning.** Prune reads it as the condition that ends the whole line of work, not merely the condition that kills a channel. Name it wherever stage 4 appears — in its **Closed, and what opens it** bullet while it is shut, and in **Why this stage** once it is open — in the founder's own words.
+
+**This file is read, never written.** Nothing this skill produces is written back into `sell-kit.md`: `campaign.md` is derived output and the kit is input, so a campaign editing it would be a derived file rewriting the thing it derives from — the founder's own test, altered by nobody's decision. Reading it fresh on every run is what makes this safe: an objective taken from it cannot be erased by the regeneration in section 8, because it is not stored in `campaign.md` — it is re-read from the kit each time.
 
 ## 2. The five stages
 
