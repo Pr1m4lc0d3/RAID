@@ -63,13 +63,25 @@ would be exactly the overclaiming this whole system exists to refuse.
 
 | Skill | Job |
 |---|---|
-| **`raid`** | Front door: doctrine, the target gate, one-time kickoff that generates a recon-and-asymmetry pack (`.monkeys/recon.md`, `.monkeys/asymmetry.md`, plus an empty `.monkeys/scars.md` where none exists yet) from the adopter's own product and market, capability report, routing to the six skills below. |
+| **`raid`** | Front door: doctrine, the target gate, one-time kickoff that generates a recon-and-asymmetry pack (`.monkeys/recon.md`, `.monkeys/asymmetry.md`, plus an empty `.monkeys/scars.md` and `.monkeys/numbers.md` where none exists yet) from the adopter's own product and market, capability report, routing to the eight skills below. |
 | **`raid-recon`** | Who hurts, captured in their own words, and where they gather. Records a room's rules and entry cost, not just its audience size — and marks anything unconfirmed `verified: no` rather than dropping it or guessing at it. Captured quotes are internal research, never republished as copy and never attributed to a named person in public. |
 | **`raid-asymmetry`** | Reads an incumbent's own revenue model from their own pricing or plans page and derives what that model structurally forbids them to say. Internal ammunition only — `asymmetry.md` is never published, and naming a rival in public copy is a RAID violation in its own right, binding on a RAID-only install and enforced by `FORTRESS` as well where that is installed. |
 | **`raid-stunt`** | The disproportionate play, filtered by the carry test: name the person who repeats it and why repeating it serves them, or don't build it. Holds a hard floor first — nothing unlawful, no hoaxes or impersonation, nothing that could read as a real emergency, no breach of a platform's terms — then rejects plays that insult the audience they need, would embarrass if they worked, or require a budget to be noticed. |
 | **`raid-moment`** | Ambush timing: rides attention already in motion instead of manufacturing it, refuses to ride a tragedy, and lets a moment pass rather than publish an unverified claim to catch it. |
 | **`raid-borrow`** | Finds a room that already has an audience and pays for standing in it with usefulness offered in advance — never a drop-and-pitch. Discloses a material connection in the same message it's mentioned, one account per person per platform, and nothing copy-pasted across rooms. |
 | **`raid-multiply`** | Cuts one substantial asset into many standalone pieces. Every cut has to make sense on its own, with no assumed context from the source. A cut inherits the source's licence, rights and consent. Decides and drafts the cuts; rendering is the last mile and needs no specific tool. |
+| **`raid-campaign`** | Reads whatever `.monkeys/` pack exists and works out, by checking five ordered gates rather than guessing, which stage of the work is actually open — then writes that decision to `.monkeys/campaign.md` so the next session doesn't re-decide from a blank page. |
+| **`raid-briefing`** | Reads the pack, `campaign.md`, prior briefings, and `numbers.md` — never fetches anything — and writes today's four-block slice (moved, today, blocked, rot) to `.monkeys/briefings/<date>.md`, capped at three actions so it stays readable in under two minutes. |
+
+## The campaign-and-briefing loop
+
+`raid-campaign` and `raid-briefing` close a loop on top of the six plays above. `raid-campaign`
+reads the whole `.monkeys/` pack and turns it into the stage-gated sequence — which of five stages
+is actually open, checked against the pack rather than assumed. `raid-briefing` reads that sequence
+back and hands over today's slice of it: what moved, what to do today, what's blocked, and what's
+quietly rotting. Neither one fetches anything, and neither one publishes anything — `numbers.md` is
+written only by a human or a companion holding real credentials, and every output from both skills
+is a file a human reads, same staging rule as the rest of RAID.
 
 ## Install
 

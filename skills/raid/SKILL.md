@@ -1,11 +1,11 @@
 ---
 name: raid
-description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the six focused sub-skills.
+description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the eight focused sub-skills.
 ---
 
 # raid
 
-This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the six focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
+This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the eight focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
 
 ## 1. The doctrine
 
@@ -46,6 +46,7 @@ Before committing effort to any play, run this gate in order:
 | Is attention already in motion I can ride instead of manufacturing? | `raid-moment` |
 | Does this room already have the audience, so I don't have to build one? | `raid-borrow` |
 | Does this asset already exist in another form? | `raid-multiply` |
+| Is this stage even open yet? | `raid-campaign` |
 | Is this a draft a **human** sends — or am I about to send it myself? If I am sending, stop. | `raid` |
 
 *If nothing carries it and nothing is disproportionate, it is not a raid — it is just work. And if the agent is the one hitting send, it is not a raid either — it is an unreviewed action taken in someone else's name.*
@@ -59,7 +60,7 @@ State this plainly before starting, and mean it: **nothing here is pre-filled.**
 Two roots are in play throughout these steps:
 
 - **Plugin root** — where this plugin is installed. Address it with `${CLAUDE_PLUGIN_ROOT}`; the capability report in section 6 reads `companions.json` from here.
-- **Adopter's repo root** — the directory you are working in. Every file you *write* — `.monkeys/recon.md`, `.monkeys/asymmetry.md`, and `.monkeys/scars.md` if it is absent — is relative to it.
+- **Adopter's repo root** — the directory you are working in. Every file you *write* — `.monkeys/recon.md`, `.monkeys/asymmetry.md`, `.monkeys/scars.md` if it is absent, and `.monkeys/numbers.md` if it is absent — is relative to it.
 
 Steps, in order:
 
@@ -108,7 +109,21 @@ Steps, in order:
    Filled in after something actually happens. Never guessed in advance.
    ```
 
-6. **Report back** what was written, and state plainly that every pain traces to something the adopter said or something independently found in public, and every asymmetry claim traces to a fetched pricing or plans page — nothing was invented to fill space.
+6. **Write `.monkeys/numbers.md` — only if it does not already exist** (adopter's repo root). The place live numbers enter the pack at all, started empty: a five-column table plus a line stating who fills it in and that an empty table is honest. If the file is already there, leave it exactly as it is and say so in the report — `raid-briefing` writes this same file where kickoff hasn't already, and an existing table may hold real dated rows, not a template to overwrite.
+
+   ```markdown
+   # Numbers
+
+   Written by whoever has the credentials. Never fetched by a skill.
+   An empty table is honest; an invented row is not.
+
+   | Date | Metric | Kind | Value | Source |
+   |---|---|---|---|---|
+   ```
+
+   `Kind` is `motte` or `bailey`. The distinction exists because rented attention is not something a founder can prune toward.
+
+7. **Report back** what was written, and state plainly that every pain traces to something the adopter said or something independently found in public, and every asymmetry claim traces to a fetched pricing or plans page — nothing was invented to fill space.
 
 ## 6. Capability report
 
@@ -127,6 +142,8 @@ As shipped, `companions.json` is empty — RAID needs no add-ons to produce any 
 | Reacting to news, timing a launch, or deciding whether now is the moment | `raid-moment` |
 | Looking for an audience, or considering a podcast, newsletter, or community | `raid-borrow` |
 | Having made one asset, planning content, or wanting more output without more work | `raid-multiply` |
+| Planning a campaign, asking what to do first, or asking what comes next | `raid-campaign` |
+| Asking for a daily briefing, or what to work on today | `raid-briefing` |
 
 ## 8. The pairing
 
@@ -136,4 +153,4 @@ RAID is fully usable alone — every skill it routes to produces its complete de
 
 ## 9. Built-ins only
 
-Every skill in this plugin — this one and all six it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 6's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function.
+Every skill in this plugin — this one and all eight it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 6's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function.
