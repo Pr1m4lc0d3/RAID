@@ -86,7 +86,7 @@ is a file a human reads, same staging rule as the rest of RAID.
 ## Install
 
 ```
-/plugin marketplace add ./RAID
+/plugin marketplace add Pr1m4lc0d3/RAID
 /plugin install raid@raid
 ```
 
