@@ -33,18 +33,20 @@ Everyone starts at stage 0. It has no gate — building the pack and standing up
 
 ## 3. The gates
 
-Check the gates in order, starting at stage 1. The open stage is the highest one whose condition is actually true when checked against the pack — not the one the adopter believes is true, and not the one that would be convenient this week.
+Evaluate the gates in order, from stage 1 to stage 4 — never skip ahead to check a later one first. **The conditions are not monotonic:** a pack can satisfy gate 4 while failing gate 1 — two dated rows in `numbers.md` and zero entries under `truth.md` `## Cleared` does exactly that. There is one algorithm here, stated once: **stop at the first gate that fails.** The open stage is the last stage whose gate passed before that failure — never a stage picked because its own condition happens to be true in isolation, never the one the adopter believes is true, and never the one that would be convenient this week.
 
-| Stage opens when | Checked by reading |
-|---|---|
-| **1 · Standing** | `truth.md` has at least one entry under `## Cleared` | if it does not, the founder has nothing they can safely say |
+| Stage | Opens when | Why the gate exists |
+|---|---|---|
+| **1 · Standing** | `truth.md` has at least one entry under `## Cleared` | until then the founder has nothing they can safely say |
 | **2 · First artifacts** | at least one account in `bailey.md` `## Active` reads `standing: warming` or `established` | publishing as a stranger wastes the artifact |
-| **3 · First links** | `motte.md` `## Held` is non-empty **and** the delivery check passes | a link into rented ground converts standing into someone else's asset |
-| **4 · Prune** | `numbers.md` has at least two dated rows | you cannot prune against nothing |
+| **3 · First links** | `motte.md` `## Held` is non-empty **and** the delivery check passes | a link into rented ground converts earned standing into someone else's asset |
+| **4 · Prune** | `numbers.md` has at least two dated rows, **at least one of kind `motte`** | you cannot prune against nothing, and two rows of rented attention is not evidence |
+
+`numbers.md`'s `Kind` column marks each row `motte` or `bailey`. Gate 4 reads it directly — two rows of pure rented-platform attention (impressions, likes) is not something there is anything to prune toward, so they don't satisfy the gate on their own. Where FORTRESS is present, `fortress-measure` owns the motte-beats-bailey doctrine behind this distinction; it is reinforcement here, never a requirement — this gate reads the `Kind` column on its own, with or without FORTRESS installed.
 
 A missing file reads the same as an empty one. No `bailey.md` means no `## Active` entries, which closes stage 2 exactly as if the file existed with nothing in it. "The file doesn't exist yet" is not unknown — it is the same answer as "checked, and it's empty."
 
-Stop at the first gate that fails. The stage before it is open; the stage it belongs to is closed. Report both: the open stage is what `campaign.md`'s **Open now** describes; the closed one is what its **Closed, and what opens it** describes.
+Report both ends of the result: the open stage is what `campaign.md`'s **Open now** describes; the stage whose gate failed is what its **Closed, and what opens it** describes.
 
 ## 4. The delivery check
 
@@ -88,6 +90,8 @@ Some things cannot be unblocked by work: a pricing decision, a legal question, a
 
 ## 8. Writing `campaign.md`
 
+Before writing, check whether `campaign.md` already exists. If it does, read it first. **Override records and every entry under `## Blocked on a human decision` are carried forward into the new file, never dropped.** An override record is permanent: it documents that a gate was crossed early and on whose instruction, and a record that disappears the next time this skill runs is worse than no record at all — it reads as though the gate was never crossed. Regenerate every other section fresh from the current pack state; only those two carry forward untouched.
+
 Write `.monkeys/campaign.md` at the adopter's repo root, in exactly this shape — this is a contract `raid-briefing` reads:
 
 ```markdown
@@ -95,6 +99,7 @@ Write `.monkeys/campaign.md` at the adopter's repo root, in exactly this shape �
 
 **Stage:** <0-4> — <stage name>
 **Opened:** <YYYY-MM-DD>
+**Delivery check:** <not yet asked | confirmed YYYY-MM-DD | unverified YYYY-MM-DD — reason>
 
 ## Why this stage
 <one paragraph: what is true that opened it, what is not yet true>
@@ -108,6 +113,8 @@ Write `.monkeys/campaign.md` at the adopter's repo root, in exactly this shape �
 ## Blocked on a human decision
 - <decision> — why it blocks: <what cannot proceed> — who: <the adopter>
 ```
+
+`Delivery check` records the answer to the question in section 4 the moment it is asked — confirmed or not — so a later run reads this line instead of asking blind. Re-ask only when it still reads `not yet asked`, or `unverified` and nothing has changed since.
 
 Every bullet under **Open now** names a real action drawn from what's actually in the pack — which specific room from `recon.md` to enter next, which specific asset to build — never the stage table's one-line description restated as if restating it were an action. `skill:` names the sibling that actually does it, `raid-*` or, where FORTRESS is present, `fortress-*`, so the founder knows where to go, not just what to do. `done when:` is a condition checkable against the pack next run — the same discipline the gates themselves use, not a feeling of being finished.
 
