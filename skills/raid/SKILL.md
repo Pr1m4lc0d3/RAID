@@ -60,7 +60,7 @@ State this plainly before starting, and mean it: **nothing here is pre-filled.**
 Two roots are in play throughout these steps:
 
 - **Plugin root** — where this plugin is installed. Address it with `${CLAUDE_PLUGIN_ROOT}`; the capability report in section 6 reads `companions.json` from here.
-- **Adopter's repo root** — the directory you are working in. Every file you *write* — `.monkeys/recon.md`, `.monkeys/asymmetry.md`, and, each only where it is absent, `.monkeys/truth.md`, `.monkeys/motte.md`, `.monkeys/bailey.md`, `.monkeys/scars.md` and `.monkeys/numbers.md` — is relative to it.
+- **Adopter's repo root** — the directory you are working in. Every file you *write* — `.monkeys/recon.md`, `.monkeys/asymmetry.md`, and, each only where it is absent, `.monkeys/truth.md`, `.monkeys/motte.md`, `.monkeys/bailey.md`, `.monkeys/scars.md` and `.monkeys/numbers.md`, plus `.monkeys/sell-kit.md` where a Sell-Kit was imported — is relative to it.
 
 **The pack is the interface, not the plugin.** `raid-campaign`'s gates read `truth.md`, `motte.md` and `bailey.md`, and a missing file reads the same as an empty one — so an adopter who installs RAID alone and has none of those files is pinned at stage 0 with nothing in RAID able to change it. Kickoff therefore creates every pack file RAID's own gates read, **only where it is absent**. Whoever arrives first creates a file; each plugin owns the *discipline* for its own files; neither is blocked by the other's absence.
 
@@ -68,14 +68,54 @@ Where `FORTRESS` is installed, `fortress-truth`, `fortress-motte` and `fortress-
 
 Steps, in order:
 
-1. **Interview the adopter.** Ask, one question at a time:
+1. **Ask whether there is a Sell-Kit, and read it if there is.** Ask one question and wait for the answer: *"Do you have a Sell-Kit from Idea Forge Pro?"*
+
+   If the answer is no, skip the rest of this step. Nothing else in kickoff changes — the interview below is the whole of it, exactly as it was before this step existed. **A Sell-Kit is never required.** Idea Forge Pro (ideaforgepro.com) is a separate, free, bring-your-own-API-key tool that runs a startup idea through seven gates and exports a Sell-Kit: `<name>-sell-kit.md`, plus a `<name>-forge.json` holding the same data typed. It is optional in exactly the way `FORTRESS` is optional here — RAID runs with no Sell-Kit, no Idea Forge Pro, and no internet beyond the built-in WebSearch and WebFetch.
+
+   If the answer is yes, ask for the path. Where both files exist, read the **`-forge.json`** — it is typed, so nothing is lost to formatting — and fall back to the `-sell-kit.md` where that is the only one. A kit may carry any subset of its fields; an absent field is absent.
+
+   Before a single field moves anywhere, the rule that governs the whole import:
+
+   > **A Sell-Kit field never enters `## Cleared` unless its evidence grade earns it.**
+
+   A Sell-Kit is largely written by a model from what a founder typed into it. Importing that prose into a truth register as fact would inject model-written claims into the exact place that exists to keep them out — and the claim linter would then pass them forever, because a line that *looks* sourced is all a script can check. **The default for anything without a grade is Uncleared.**
+
+   The kit's claim register carries one line per claim with an evidence grade: **A** attested · **B** observed · **C** public principle · **D** analogy · **E** founder assertion · **F** generated. Its own rule is that anything generated is F and **cannot be raised** — not by argument, not by the founder wanting it, and not by this import.
+
+   Map it exactly. Nothing here creates a file; hold the mapped lines and write them when the steps below write the files themselves.
+
+   | From the kit | Goes to | Carrying |
+   |---|---|---|
+   | `What is known` | `truth.md` `## Cleared` | the source the kit names, as ` — source: <exact source>` |
+   | `What is hypothesized` | `truth.md` `## Uncleared` | ` — reason: hypothesis, not established` |
+   | claim register, graded **A/B/C/D** | `truth.md` `## Cleared` | ` — source: <the source the register names>` |
+   | claim register, graded **E** | `truth.md` `## Uncleared` | ` — reason: founder assertion, no source` |
+   | claim register, graded **F** | `truth.md` `## Uncleared` | ` — reason: model-written, cannot be raised` |
+   | `Problem` | `recon.md` `## Pains` | already in the buyer's own words — see the `verified:` rule below |
+   | entities `Reality status` marks real | `asymmetry.md` `## Incumbents` | `revenue model: unknown — not verified` |
+   | the pre-build test fields | `.monkeys/sell-kit.md` | see the step that writes it |
+   | **every other field** | `truth.md` `## Uncleared` | ` — reason: from a Sell-Kit, ungraded` |
+
+   The rules that make that table hold, each one the place the import goes wrong if it is softened:
+
+   - **`What is known` is the only field that arrives already eligible for Cleared**, because that is its own definition inside the kit: facts directly supplied by the founder or independently supported, nothing generated. It still needs a ` — source:` suffix. Where the kit doesn't name one, **ask the adopter**; if they can't name one either, it goes to **Uncleared** instead — ` — reason: no source named`. All of this applies **only where this kickoff is creating `truth.md`**; where the file is already there it is left exactly as it is, and the mapped lines are handed to the adopter in the report instead of written.
+   - **Every other field goes to Uncleared unless the claim register grades it A–D.** `Buyer`, `Problem`, `Why now`, `Offer`, `Price`, `Value artifact`, `Channel`, `Intent signal` — all of it. **A price a model proposed is not a fact about the world.**
+   - **The `Problem` becomes one `## Pains` entry**, with `heard in: <where the kit says it was heard>` where the kit says, and `heard in: Sell-Kit — not independently found` where it doesn't. **`verified:` is `no` unless the claim register grades that same claim A or B.** The public search in the next step can raise it exactly as it raises any other pain; the kit alone never does.
+   - **Nothing from the kit goes into `## Rooms`. Nothing.** The kit's `Channel` is a channel *type* — "a forum", "a newsletter" — not a named room with rules, an audience and an entry cost. Rooms still require research, and that research is `raid-recon`'s job and the next step's. **Entering a room on assumed rules is how an account gets banned**, and a room invented from a channel type arrives with all three of its fields guessed at once.
+   - **Never infer a revenue model from a kit.** Each incumbent the kit's `Reality status` marks real lands as `revenue model: unknown — not verified` and `therefore cannot say: unknown — follows from the revenue model, not yet fetched`, and stays that way until `raid-asymmetry` fetches that incumbent's own pricing or plans page. Nothing goes under `## Our ground`: it derives from a model nobody has read yet.
+
+   Ignore the kit's builder spec entirely — `Acceptance criteria`, `Must nail`, `Out of scope (v1)`. Those describe what to build, not where to fight, and nothing in RAID reads them.
+
+   **Never fabricate a field the kit lacks.** An absent field is absent: ask for it in the interview, or leave it out. Then run the interview below asking only for what the kit did not answer, and confirming — not re-asking — what it did.
+
+2. **Interview the adopter.** Ask, one question at a time:
    - Product name and a one-line description.
    - Who hurts without it, and what they've actually said about the problem — in their own words, not the product's.
    - Where those people already gather — forums, subreddits, newsletters, local meetups, anywhere with a name.
    - Named incumbents or competitors worth researching, and — exactly as you'd ask for a canonical source — their pricing or plans page URL where the adopter already knows it. (These names are research targets only — see the rule below.)
    - **One thing about the product they could hand a stranger a source for** — a fact, a number, a capability, a date — and where that source is: a URL, a document, a repo, a receipt. One is enough. This is the fact that opens stage 1, so ask for it plainly and ask where it can be checked. If they have nothing they can source yet, that is a real answer: record it, don't press, and never supply one for them. A founder with nothing sourceable is at stage 0, and saying so is the honest result.
 
-2. **Fetch public sources.** Use WebSearch to find where the pains above show up in public and to confirm the rooms named actually exist and are active. For each incumbent: if the adopter supplied a URL, WebFetch it directly. If not, WebSearch for the incumbent's own site and locate its own pricing or plans page there, then WebFetch that page. **A third-party summary, review site, or comparison page is not an acceptable source for what a competitor charges** — go to the incumbent's own page, or treat it as not found. A pain or room the adopter names but that can't be found or confirmed publicly still goes in the pack — mark it `verified: no` rather than dropping it or inventing a source for it. An incumbent whose own pricing page can't be located the same way goes into `asymmetry.md` with `revenue model: unknown — not verified` — never a guessed or inferred model. Guessing the revenue model is inventing the very claim this skill exists to source: the whole asymmetry method collapses if the model is wrong.
+3. **Fetch public sources.** Use WebSearch to find where the pains above show up in public and to confirm the rooms named actually exist and are active. For each incumbent: if the adopter supplied a URL, WebFetch it directly. If not, WebSearch for the incumbent's own site and locate its own pricing or plans page there, then WebFetch that page. **A third-party summary, review site, or comparison page is not an acceptable source for what a competitor charges** — go to the incumbent's own page, or treat it as not found. A pain or room the adopter names but that can't be found or confirmed publicly still goes in the pack — mark it `verified: no` rather than dropping it or inventing a source for it. An incumbent whose own pricing page can't be located the same way goes into `asymmetry.md` with `revenue model: unknown — not verified` — never a guessed or inferred model. Guessing the revenue model is inventing the very claim this skill exists to source: the whole asymmetry method collapses if the model is wrong.
 
    **The same discipline binds `recon.md`'s `rules:` and `audience:` fields, and it is not softer there.** A room whose own rules page, sidebar, or pinned posting policy was not actually read has `rules: unknown — not verified`. A room whose make-up was not read off the room itself has `audience: unknown — not verified`. Neither field is ever filled in from what rooms of that kind *usually* forbid or *usually* contain, and a search-result summary describing a room is not a reading of the room. Entering a room on assumed rules is how an account gets banned, and a ban is permanent — the assumption becomes invisible the moment it is written into the pack as a fact, which is exactly why it has to be refused at the point of writing.
 
@@ -83,7 +123,7 @@ Steps, in order:
 
    **Check the adopter's one sourceable fact against the source they named**, by WebFetch for a URL or Read for a local document, exactly as an incumbent's pricing is checked against their own page. It clears only if the source actually says it.
 
-3. **Write `.monkeys/recon.md`** (adopter's repo root), in exactly this shape — this is a contract `raid-recon` and every other sibling reads:
+4. **Write `.monkeys/recon.md`** (adopter's repo root), in exactly this shape — this is a contract `raid-recon` and every other sibling reads:
 
    ```markdown
    # Recon — who hurts, and where
@@ -95,7 +135,7 @@ Steps, in order:
    - <community or room> — audience: <who is there> — rules: <what they forbid> — entry cost: <what it takes to be welcome>
    ```
 
-4. **Write `.monkeys/asymmetry.md`** (adopter's repo root), in exactly this shape — this is a contract `raid-asymmetry` reads:
+5. **Write `.monkeys/asymmetry.md`** (adopter's repo root), in exactly this shape — this is a contract `raid-asymmetry` reads:
 
    ```markdown
    # Asymmetry — ground they cannot hold
@@ -109,7 +149,7 @@ Steps, in order:
 
    **This file is internal ammunition and is never published.** Naming a rival in public copy — anywhere a stranger can read it — is a RAID violation, and the rule is RAID's own: `raid-asymmetry` states it in full, and it binds in a RAID-only install exactly as it binds anywhere else. Where `FORTRESS` is present it enforces the same rule, as reinforcement and never as the source. This file exists to sharpen private judgment about where to stand, not to write attack copy.
 
-5. **Write `.monkeys/truth.md` — only if it does not already exist** (adopter's repo root). `raid-campaign`'s gate 1 reads this file; without it the staircase never opens. Emit the structure and nothing else — placeholder comments, no example facts:
+6. **Write `.monkeys/truth.md` — only if it does not already exist** (adopter's repo root). `raid-campaign`'s gate 1 reads this file; without it the staircase never opens. Emit the structure and nothing else — placeholder comments, no example facts:
 
    ```markdown
    # Truth Register
@@ -133,11 +173,11 @@ Steps, in order:
    <!-- The URL or location to re-fetch before every copy batch. Never write from memory of it. -->
    ```
 
-   Then write the adopter's own fact from step 1 into it, using what step 2 found. If the named source actually says it, it goes under **Cleared** as `- <the fact> — source: <the exact source>`. If it could not be checked, it goes under **Uncleared** as `- <the fact> — reason: <why it is not cleared>`. This is the adopter's own fact, checked this run against a real source — the same standard every pain in `recon.md` is held to — and it is the opposite of a pre-filled example: nothing here is written that the adopter did not say and the source did not confirm. If the adopter had nothing they could source, both sections stay empty and the report says so. **Never invent a fact, and never move one to Cleared to open a gate** — an empty register is honest, and it means the open stage is 0 until someone with a source changes that.
+   Then write the adopter's own fact from step 2 into it, using what step 3 found. If the named source actually says it, it goes under **Cleared** as `- <the fact> — source: <the exact source>`. If it could not be checked, it goes under **Uncleared** as `- <the fact> — reason: <why it is not cleared>`. This is the adopter's own fact, checked this run against a real source — the same standard every pain in `recon.md` is held to — and it is the opposite of a pre-filled example: nothing here is written that the adopter did not say and the source did not confirm. If the adopter had nothing they could source, both sections stay empty and the report says so. **Never invent a fact, and never move one to Cleared to open a gate** — an empty register is honest, and it means the open stage is 0 until someone with a source changes that.
 
    If the file is already there, leave it exactly as it is and say so in the report. Where `FORTRESS` is installed, `fortress-truth` owns this file's discipline and adding facts to it is that skill's job, not this one's.
 
-6. **Write `.monkeys/motte.md` — only if it does not already exist** (adopter's repo root). `raid-campaign`'s gate 3 reads `## Held`. Structure only, placeholder comments only, nothing pre-filled:
+7. **Write `.monkeys/motte.md` — only if it does not already exist** (adopter's repo root). `raid-campaign`'s gate 3 reads `## Held`. Structure only, placeholder comments only, nothing pre-filled:
 
    ```markdown
    # Motte — what cannot be confiscated
@@ -155,7 +195,7 @@ Steps, in order:
 
    Leave it empty. Standing up an owned asset is stage 0 work and nothing in RAID performs it — see the routing note in `raid-campaign` section 2. If the file is already there, leave it exactly as it is and say so in the report; where `FORTRESS` is installed, `fortress-motte` owns this file's discipline.
 
-7. **Write `.monkeys/bailey.md` — only if it does not already exist** (adopter's repo root). `raid-campaign`'s gate 2 reads `## Active`, and `raid-briefing` reads the `standing:` field on each line there. Structure only, placeholder comments only, nothing pre-filled:
+8. **Write `.monkeys/bailey.md` — only if it does not already exist** (adopter's repo root). `raid-campaign`'s gate 2 reads `## Active`, and `raid-briefing` reads the `standing:` field on each line there. Structure only, placeholder comments only, nothing pre-filled:
 
    ```markdown
    # Bailey — rented ground
@@ -172,7 +212,7 @@ Steps, in order:
 
    Leave it empty. An account the adopter has not actually created is not an active channel, and writing one in would be the invented-evidence problem wearing a schema. If the file is already there, leave it exactly as it is and say so in the report; where `FORTRESS` is installed, `fortress-bailey` owns this file's discipline.
 
-8. **Write `.monkeys/scars.md` — only if it does not already exist** (adopter's repo root). The adopter's own incident log, started empty: a three-column table plus one line stating it gets filled in after something actually happens, never guessed in advance. If the file is already there, leave it exactly as it is and say so in the report — `FORTRESS` writes this same file where it is installed, and an existing log is someone's real history, not a template to overwrite. This is the adopter's own log, separate from RAID's own `scars.md`, which documents this plugin's history and not theirs.
+9. **Write `.monkeys/scars.md` — only if it does not already exist** (adopter's repo root). The adopter's own incident log, started empty: a three-column table plus one line stating it gets filled in after something actually happens, never guessed in advance. If the file is already there, leave it exactly as it is and say so in the report — `FORTRESS` writes this same file where it is installed, and an existing log is someone's real history, not a template to overwrite. This is the adopter's own log, separate from RAID's own `scars.md`, which documents this plugin's history and not theirs.
 
    ```markdown
    # Scars — what we learned the hard way
@@ -183,21 +223,40 @@ Steps, in order:
    Filled in after something actually happens. Never guessed in advance.
    ```
 
-9. **Write `.monkeys/numbers.md` — only if it does not already exist** (adopter's repo root). The place live numbers enter the pack at all, started empty: a five-column table plus a line stating who fills it in and that an empty table is honest. If the file is already there, leave it exactly as it is and say so in the report — `raid-briefing` writes this same file where kickoff hasn't already, and an existing table may hold real dated rows, not a template to overwrite.
+10. **Write `.monkeys/numbers.md` — only if it does not already exist** (adopter's repo root). The place live numbers enter the pack at all, started empty: a five-column table plus a line stating who fills it in and that an empty table is honest. If the file is already there, leave it exactly as it is and say so in the report — `raid-briefing` writes this same file where kickoff hasn't already, and an existing table may hold real dated rows, not a template to overwrite.
 
-   ```markdown
-   # Numbers
+    ```markdown
+    # Numbers
 
-   Written by whoever has the credentials. Never fetched by a skill.
-   An empty table is honest; an invented row is not.
+    Written by whoever has the credentials. Never fetched by a skill.
+    An empty table is honest; an invented row is not.
 
-   | Date | Metric | Kind | Value | Source |
-   |---|---|---|---|---|
-   ```
+    | Date | Metric | Kind | Value | Source |
+    |---|---|---|---|---|
+    ```
 
-   `Kind` is `motte` or `bailey`. The distinction exists because rented attention is not something a founder can prune toward.
+    `Kind` is `motte` or `bailey`. The distinction exists because rented attention is not something a founder can prune toward.
 
-10. **Report back** what was written, and state plainly that every pain traces to something the adopter said or something independently found in public, and every asymmetry claim traces to a fetched pricing or plans page — nothing was invented to fill space. Name each file that was created and each file that was found already present and left alone. Say which stage the pack now makes reachable: with one cleared fact, stage 1 is open to `raid-campaign`; with none, the answer is stage 0 and the reason is that nothing has been sourced yet.
+11. **Write `.monkeys/sell-kit.md` — only where a Sell-Kit was imported in step 1.** This is where the kit's pre-build test lands, and it is a separate file for a reason worth stating: **it does not go into `campaign.md`.** `raid-campaign` regenerates every section of that file fresh from the pack on each run, carrying forward only override records, blocked-on-a-human entries and dated drift lines — so a first objective written there by kickoff would be silently erased the first time a campaign was planned. Write it here instead, and hand this file to `raid-campaign` when planning: `The ask` becomes the campaign's first objective, `PASS if` and `KILL if` become its kill criteria, `By when` is the date that objective is checked against, `Commitment signal` defines what counts as a real row in `numbers.md`, and `Stop condition` feeds stage 4 — the prune. If the file already exists, read it back to the adopter and ask whether to replace it; a kit imported earlier may have been acted on since.
+
+    ```markdown
+    # Sell-Kit — the founder's own pre-build test
+
+    Imported from: <path to the kit> — on: <YYYY-MM-DD>
+    Nothing here was verified by this run. It is what the founder brought, recorded so it
+    is not re-decided from memory. An absent field is left out, never filled in.
+
+    - The ask: <what the buyer is being asked to do>
+    - PASS if: <the condition that counts as a pass>
+    - KILL if: <the condition that ends it>
+    - By when: <YYYY-MM-DD>
+    - Commitment signal: <what counts as a real row in numbers.md>
+    - What this test CAN prove: <...>
+    - What this test CANNOT prove: <...>
+    - Stop condition: <what stops the whole line of work>
+    ```
+
+12. **Report back** what was written, and state plainly that every pain traces to something the adopter said or something independently found in public, and every asymmetry claim traces to a fetched pricing or plans page — nothing was invented to fill space. Name each file that was created and each file that was found already present and left alone. Say which stage the pack now makes reachable: with one cleared fact, stage 1 is open to `raid-campaign`; with none, the answer is stage 0 and the reason is that nothing has been sourced yet. Where a Sell-Kit was imported, report it in the same breath: what was imported, what was placed under **Uncleared** and the reason for each, and what still needs research — the rooms nobody has read yet, and every incumbent whose revenue model is still `unknown — not verified`.
 
 ## 6. Capability report
 

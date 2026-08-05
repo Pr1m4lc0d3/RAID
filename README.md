@@ -113,6 +113,29 @@ has been verified as publicly installable by a stranger, with an exact install c
 cost, so none is listed. That's a complete answer, not a gap — `raid`'s capability report reports
 exactly this: **"No optional capabilities needed — RAID runs entirely on built-in tools."**
 
+## Arriving with a Sell-Kit
+
+Optional, and it changes nothing for an adopter who doesn't have one. **Idea Forge Pro**
+(ideaforgepro.com) is a separate, free, bring-your-own-API-key tool that runs an idea through seven
+gates and exports a *Sell-Kit*. Its fields map closely onto the `.monkeys/` pack, so a founder who
+arrives with one isn't re-interviewed for what they already wrote down:
+
+```
+An idea → Idea Forge Pro (free, your own key) → a Sell-Kit
+        → these plugins read it → your .monkeys/ pack
+        → raid-campaign → a stage-gated plan
+        → raid-briefing → today's slice
+```
+
+**Reading a Sell-Kit is not clearance.** Idea Forge Pro deliberately refuses to say "clear to
+build" — craft, demand, and a critic conceding are three different axes there — and importing a kit
+into this pack is not permission to market either. A kit changes where the interview starts, not
+what has been established: a field enters `truth.md`'s **Cleared** section only if its own evidence
+grade earns it, the kit's stated problem lands in `recon.md` marked `verified: no` until something
+independent says otherwise, and it names no room and no incumbent's revenue model — those still
+have to be read off the room and off the incumbent's own pricing page. RAID runs with no Sell-Kit,
+no Idea Forge Pro, and no internet beyond the built-in search and fetch.
+
 ## Honest proof — read this before trusting anything above
 
 `scars.md` in this repository is real. Every entry documents a concrete incident with measurable
