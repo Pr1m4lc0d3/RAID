@@ -70,7 +70,7 @@ would be exactly the overclaiming this whole system exists to refuse.
 | **`raid-moment`** | Ambush timing: rides attention already in motion instead of manufacturing it, refuses to ride a tragedy, and lets a moment pass rather than publish an unverified claim to catch it. |
 | **`raid-borrow`** | Finds a room that already has an audience and pays for standing in it with usefulness offered in advance — never a drop-and-pitch. Discloses a material connection in the same message it's mentioned, one account per person per platform, and nothing copy-pasted across rooms. |
 | **`raid-multiply`** | Cuts one substantial asset into many standalone pieces. Every cut has to make sense on its own, with no assumed context from the source. A cut inherits the source's licence, rights and consent. Decides and drafts the cuts; rendering is the last mile and needs no specific tool. |
-| **`raid-campaign`** | Reads whatever `.monkeys/` pack exists and works out, by checking five ordered gates rather than guessing, which stage of the work is actually open — then writes that decision to `.monkeys/campaign.md` so the next session doesn't re-decide from a blank page. |
+| **`raid-campaign`** | Reads whatever `.monkeys/` pack exists and works out, by checking four ordered gates across five stages rather than guessing, which stage of the work is actually open — then writes that decision to `.monkeys/campaign.md` so the next session doesn't re-decide from a blank page. |
 | **`raid-briefing`** | Reads the pack, `campaign.md`, prior briefings, and `numbers.md` — never fetches anything — and writes today's four-block slice (moved, today, blocked, rot) to `.monkeys/briefings/<date>.md`, capped at three actions so it stays readable in under two minutes. |
 
 ## The campaign-and-briefing loop
@@ -94,7 +94,9 @@ Or point the marketplace command at wherever this repository is checked out loca
 (`.claude-plugin/marketplace.json` at the repo root). Then, on the target repo, invoke `raid` to
 run kickoff — it interviews the adopter about their own product and market and generates the
 `.monkeys/recon.md` and `.monkeys/asymmetry.md` pack from scratch, and starts an empty
-`.monkeys/scars.md` if that repo doesn't already have one. Nothing ships pre-filled; a
+`.monkeys/scars.md` and `.monkeys/numbers.md` if that repo doesn't already have them —
+`numbers.md` is the only one of the four no skill ever writes a row into afterward, only a human
+or a companion holding real credentials does. Nothing ships pre-filled; a
 template with plausible-looking example pains or competitors would be exactly the invented-evidence
 problem RAID exists to avoid.
 
