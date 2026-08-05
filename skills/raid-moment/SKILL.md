@@ -25,7 +25,9 @@ Move while it's live. A moment is worth a fraction of itself a week later — th
 
 Speed is the entire advantage here — it's the reason the moment is available at low cost at all. But speed cuts both ways: **if verifying a claim would take longer than the moment lasts, let the moment go.** A false claim published fast is still a false claim, and it doesn't get less false because it was well-timed. Where `FORTRESS` is installed, a claim made inside a moment still needs a line in the truth register before it ships — the urgency of the moment is not a reason the register waits.
 
-If the honest version of the reaction is slower than the moment, either publish the honest, slower version late and accept it rides less of the wave, or don't publish at all. Publishing the fast, unverified version is not a third option.
+If the honest version of the reaction is slower than the moment, either hand over the honest, slower version late and accept it rides less of the wave, or hand over nothing at all. Drafting the fast, unverified version for someone to send is not a third option.
+
+And the speed is never the agent's to spend: **`raid` stages, it never publishes.** What this skill produces is a draft handed to a person, with the moment's clock stated plainly so they can decide whether it is still worth sending. A live moment is the strongest pressure in this plugin to skip that step — which is exactly why it does not bend here. A moment worth riding is worth the minutes it takes a human to read the thing before it goes out, and a moment that cannot survive those minutes was not a moment you could hold anyway.
 
 ## 4. What this doesn't decide
 

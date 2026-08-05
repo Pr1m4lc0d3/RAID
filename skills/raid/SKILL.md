@@ -95,7 +95,7 @@ Steps, in order:
    - <the claim we can make that they structurally cannot> — because: <their model constraint>
    ```
 
-   **This file is internal ammunition and is never published.** Naming a rival in public copy — anywhere a stranger can read it — is a `FORTRESS` violation. It exists to sharpen private judgment about where to stand, not to write attack copy.
+   **This file is internal ammunition and is never published.** Naming a rival in public copy — anywhere a stranger can read it — is a RAID violation, and the rule is RAID's own: `raid-asymmetry` states it in full, and it binds in a RAID-only install exactly as it binds anywhere else. Where `FORTRESS` is present it enforces the same rule, as reinforcement and never as the source. This file exists to sharpen private judgment about where to stand, not to write attack copy.
 
 5. **Write `.monkeys/scars.md` — only if it does not already exist** (adopter's repo root). The adopter's own incident log, started empty: a three-column table plus one line stating it gets filled in after something actually happens, never guessed in advance. If the file is already there, leave it exactly as it is and say so in the report — `FORTRESS` writes this same file where it is installed, and an existing log is someone's real history, not a template to overwrite. This is the adopter's own log, separate from RAID's own `scars.md`, which documents this plugin's history and not theirs.
 
@@ -136,4 +136,4 @@ RAID is fully usable alone — every skill it routes to produces its complete de
 
 ## 9. Built-ins only
 
-Every skill in this plugin — this one and all six it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 5's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function.
+Every skill in this plugin — this one and all six it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 6's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function.
