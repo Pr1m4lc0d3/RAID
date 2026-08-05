@@ -30,9 +30,11 @@ Create `.monkeys/numbers.md` from the schema below **only if it doesn't already 
 Written by whoever has the credentials. Never fetched by a skill.
 An empty table is honest; an invented row is not.
 
-| Date | Metric | Value | Source |
-|---|---|---|---|
+| Date | Metric | Kind | Value | Source |
+|---|---|---|---|---|
 ```
+
+`Kind` is `motte` or `bailey` — the same distinction `fortress-motte` and `fortress-bailey` use for what's owned outright versus what's rented attention. This skill doesn't interpret the column beyond reading it back; where `FORTRESS` is present, `fortress-measure` owns the doctrine behind the distinction.
 
 **An empty numbers table is honest.** It means nobody with the credentials has written a number down yet, which is a true fact about the state of the campaign and belongs in the briefing exactly as stated. **Never estimate, infer, or approximate a number to fill a row that's empty, and never carry a number over from a prior briefing as if it were fresh** — a guessed metric wearing a table's formatting is not more honest than a guess written in prose, it's a guess with better production values. If a block would need a number and none exists in `numbers.md`, say the table is empty and move on. That is the failure this skill exists to avoid, not a gap to paper over.
 
@@ -42,29 +44,36 @@ A briefing is short enough to read aloud in under two minutes. Four blocks, alwa
 
 | Block | Contains |
 |---|---|
-| **Moved** | What changed since the last briefing: new rows in `numbers.md`, an account whose `standing:` changed in `bailey.md`, a campaign action completed. **If nothing moved, say nothing moved.** |
+| **Moved** | What changed since the last briefing: new rows in `numbers.md`, an account whose `standing:` changed in `bailey.md`, a campaign action gone from `campaign.md`'s Open now since last time. **If nothing moved, say nothing moved.** |
 | **Today** | One to three actions, drawn **only** from `campaign.md`'s **Open now** — never from a closed stage, never invented outside what's already there — each naming the skill that does it. |
 | **Blocked** | What is waiting, and on what or whom. Pull `campaign.md`'s **Blocked on a human decision** in full; add anything else found stalled while reading the pack. Human decisions are listed by name, not left as "pending." |
 | **Rot** | What is quietly degrading. See §3. |
 
-**Moved** needs a prior briefing to diff against. If none exists under `.monkeys/briefings/`, this is the first one — say that plainly ("first briefing — nothing to compare against yet"), which is a different statement from "nothing moved" and should not be written as if it were the same thing. Once a prior briefing exists, diff against the most recent one: new dated rows in `numbers.md` since its date, any `standing:` field in `bailey.md` that reads differently now, any line that was under `campaign.md`'s **Open now** last time and is gone or marked done this time.
+**Moved** needs a prior briefing to diff against. If none exists under `.monkeys/briefings/`, this is the first one — say that plainly ("first briefing — nothing to compare against yet"), which is a different statement from "nothing moved" and should not be written as if it were the same thing. Once a prior briefing exists, diff against the most recent one: new dated rows in `numbers.md` since its date, any `standing:` field in `bailey.md` that reads differently now, any line that was under `campaign.md`'s **Open now** last time and is absent from it now.
 
-**Today** is read, not decided. This skill does not determine which stage is open — `raid-campaign` already did that and wrote it to `campaign.md`. Copying an action campaign.md doesn't list, or one that campaign.md itself flags as entered early on override, into **Today** without saying so, is exactly the closed-stage leak this block exists to prevent. If `campaign.md` records an override (an action entered early on the adopter's explicit instruction), it may appear in **Today** — but say plainly that it's an override, in the same words `campaign.md` already used to record it.
+`campaign.md` carries no completion marker — there is no field anywhere that says a given action was finished rather than dropped. An action that was under **Open now** last time and isn't there now has changed, and that much is checkable; whether it was completed or simply removed is not something reading `campaign.md` alone can tell you. Report it as changed, and say plainly that this skill can see that it changed but not which of the two happened — that is the honest limit of what the file records, not a gap to paper over with a guess either way.
+
+**Today** is read, not decided. This skill does not determine which stage is open — `raid-campaign` already did that and wrote it to `campaign.md`. Copying an action `campaign.md` doesn't list into **Today** is exactly the closed-stage leak this block exists to prevent. An override-flagged action — one `campaign.md` records as entered early, on the adopter's explicit instruction — may appear in **Today** only when that specific override record is actually present in `campaign.md`, and it must carry its label every time it's shown, in the same words `campaign.md` used to record it. If the label can't be substantiated by reading `campaign.md` — no matching record for that action — the action does not go in **Today**, full stop. The label is the only thing that distinguishes a deliberate early entry from a gate that got skipped quietly; an override shown without it is indistinguishable from a leak, so the label is not optional decoration on the entry, it's the entire justification for the entry existing in **Today** at all.
 
 ## 3. Rot detection
 
-Rot is concrete and checkable, never a vibe. On every run, check for each of the following and report any that are actually present — no padding the block with a vague worry when none of these fire, and no silence when one does:
+Rot is concrete and checkable, never a vibe. Every check here has to be answerable from something the pack or the briefing history actually records — a check with no readable signal behind it is worse than no check at all, because it reads as coverage and delivers nothing. On every run, check for each of the following and report any that are actually present — no padding the block with a vague worry when none of these fire, and no silence when one does:
 
-- an entry in `truth.md` `## Uncleared` that has not moved since it appeared
+- an entry in `truth.md` `## Uncleared` that is still sitting there, unmoved, across two briefings in a row
 - an incumbent in `asymmetry.md` with `revenue model: unknown — not verified`
-- a room in `recon.md` `## Rooms` never entered, when the stage `campaign.md` reports as open calls for entering rooms
+- a room in `recon.md` `## Rooms` that no prior briefing has recorded as acted on, when the stage `campaign.md` reports as open calls for entering rooms
 - a channel in `bailey.md` `## Active` with no row in `numbers.md`
-- a staged draft that has not been sent
 - an entry in `scars.md` whose rule today's open action would trip
 
-For that last one, **surface the rule, not just the incident.** "Room X banned a promotional post last March" is the incident; "this room's rule is no links until N days of participation, and today's open action is a link" is the rule, and the rule is what's actually actionable — it tells the reader what today's action needs to avoid, not just what happened once before.
+**`## Uncleared` carries no date field**, so "hasn't moved" is read against prior briefings instead of a timestamp. An entry counts as rotting once it appears under `truth.md`'s `## Uncleared` now **and** the same entry text already appeared in the immediately preceding briefing's **Rot** section. The first time an entry is seen, there is nothing to compare it against yet — note it plainly as newly observed rather than calling it rot; one sighting can't show something hasn't moved, only two can, and that note is what gives the next run something to check against. This is self-bootstrapping in the strict sense: on the very first briefing ever written for a pack, there is no preceding briefing at all, so nothing under this check can fire or even seed yet — say that plainly, the same way a missing `campaign.md` is said plainly rather than guessing at a history that isn't there.
 
-If none of the six checks find anything, say rot is clear. That is a real finding, stated plainly, not an empty section left to imply nothing was checked.
+**Rooms** works the other direction: scan every prior file under `.monkeys/briefings/`, not just the most recent one, for the room's name appearing in a **Today** or **Moved** entry — that's the plain-text evidence the room was named as real work at least once, queued in a **Today** or reported changed in a **Moved**. That's not certified proof a visit happened — a **Today** entry can go undone the same way `campaign.md` can't confirm a completed action above — but it's the honest ceiling of what the pack can show, and it's a real signal: a room never once written down anywhere is a room nothing has actually pointed at yet. A room named in `recon.md` `## Rooms` that never shows up that way, while the stage `campaign.md` reports as open calls for entering rooms, is rot. On the first briefing there are no prior files to search, so every named room reads as not-yet-acted-on — that's the correct reading of a pack that hasn't done anything yet, not a false positive to suppress.
+
+For the `scars.md` check, **surface the rule, not just the incident.** "Room X banned a promotional post last March" is the incident; "this room's rule is no links until N days of participation, and today's open action is a link" is the rule, and the rule is what's actually actionable — it tells the reader what today's action needs to avoid, not just what happened once before.
+
+**One check from the original design is dropped outright, not fixed: a staged draft that has not been sent.** Nothing in the pack tracks drafts — there is no drafts file and no field anywhere that records one existing or being sent. A check with no readable signal behind it is not a check, it's a claim of coverage this skill cannot back up, so it does not belong in this list. If drafting-and-sending discipline ever gets a place to live in the pack, this check can come back; until then, say plainly that drafts are not something a briefing can see, rather than implying they're being watched.
+
+If none of the five checks find anything, say rot is clear. That is a real finding, stated plainly, not an empty section left to imply nothing was checked.
 
 ## 4. Today is capped at three
 
@@ -72,7 +81,28 @@ Never more than three actions in **Today**, even when `campaign.md`'s **Open now
 
 ## 5. Writing the artifact
 
-Write `.monkeys/briefings/<YYYY-MM-DD>.md`, dated to the day the briefing is produced. One file per day, and it is never overwritten.
+Write `.monkeys/briefings/<YYYY-MM-DD>.md`, dated to the day the briefing is produced, in exactly this shape — a later run of this same skill reads it back to compute **Moved** and the two prior-briefing rot checks in §3, so the shape has to hold steady the way `campaign.md`'s shape holds steady for `raid-campaign`:
+
+```markdown
+# Briefing — <YYYY-MM-DD>
+
+**Stage (from campaign.md):** <n> — <stage name>
+
+## Moved
+<what changed since the last briefing, or: first briefing — nothing to compare against yet>
+
+## Today
+<one to three actions, each: <action> — skill: <raid-* or fortress-*> — done when: <condition>>
+<if any were left out: "<n> shown, <n> more open — see campaign.md.">
+
+## Blocked
+<what's waiting, and on whom — human decisions named>
+
+## Rot
+<any findings from §3, or: rot is clear>
+```
+
+One file per day, and it is never overwritten.
 
 If today's file already exists, read it back to the adopter and ask, in plain text, whether to append a new entry to it or produce a fresh briefing in its place. Don't silently pick one — a same-day re-run usually means something changed since the morning, and whether that belongs alongside the first briefing or replaces it is the adopter's call, not a default this skill gets to assume.
 
