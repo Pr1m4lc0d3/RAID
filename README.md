@@ -63,7 +63,7 @@ would be exactly the overclaiming this whole system exists to refuse.
 
 | Skill | Job |
 |---|---|
-| **`raid`** | Front door: doctrine, the target gate, one-time kickoff that generates a recon-and-asymmetry pack (`.monkeys/recon.md`, `.monkeys/asymmetry.md`, plus an empty `.monkeys/scars.md` and `.monkeys/numbers.md` where none exists yet) from the adopter's own product and market, capability report, routing to the eight skills below. |
+| **`raid`** | Front door: doctrine, the target gate, one-time kickoff that generates a recon-and-asymmetry pack (`.monkeys/recon.md`, `.monkeys/asymmetry.md`) from the adopter's own product and market and creates every other pack file RAID's own gates read — `truth.md`, `motte.md`, `bailey.md`, `scars.md`, `numbers.md` — empty, and only where none exists yet. Capability report, routing to the eight skills below. |
 | **`raid-recon`** | Who hurts, captured in their own words, and where they gather. Records a room's rules and entry cost, not just its audience size — and marks anything unconfirmed `verified: no` rather than dropping it or guessing at it. Captured quotes are internal research, never republished as copy and never attributed to a named person in public. |
 | **`raid-asymmetry`** | Reads an incumbent's own revenue model from their own pricing or plans page and derives what that model structurally forbids them to say. Internal ammunition only — `asymmetry.md` is never published, and naming a rival in public copy is a RAID violation in its own right, binding on a RAID-only install and enforced by `FORTRESS` as well where that is installed. |
 | **`raid-stunt`** | The disproportionate play, filtered by the carry test: name the person who repeats it and why repeating it serves them, or don't build it. Holds a hard floor first — nothing unlawful, no hoaxes or impersonation, nothing that could read as a real emergency, no breach of a platform's terms — then rejects plays that insult the audience they need, would embarrass if they worked, or require a budget to be noticed. |
@@ -93,12 +93,19 @@ is a file a human reads, same staging rule as the rest of RAID.
 Or point the marketplace command at wherever this repository is checked out locally
 (`.claude-plugin/marketplace.json` at the repo root). Then, on the target repo, invoke `raid` to
 run kickoff — it interviews the adopter about their own product and market and generates the
-`.monkeys/recon.md` and `.monkeys/asymmetry.md` pack from scratch, and starts an empty
-`.monkeys/scars.md` and `.monkeys/numbers.md` if that repo doesn't already have them —
-`numbers.md` is the only one of the four no skill ever writes a row into afterward, only a human
-or a companion holding real credentials does. Nothing ships pre-filled; a
-template with plausible-looking example pains or competitors would be exactly the invented-evidence
-problem RAID exists to avoid.
+`.monkeys/recon.md` and `.monkeys/asymmetry.md` pack from scratch. It also creates, **only where
+the repo doesn't already have them**, every other file `raid-campaign`'s gates read: an empty
+`.monkeys/truth.md`, `.monkeys/motte.md`, `.monkeys/bailey.md`, `.monkeys/scars.md` and
+`.monkeys/numbers.md`. That is what makes a RAID-only install usable rather than pinned at stage
+zero — the gates read the pack, so the pack has to exist. Whoever arrives first creates a file;
+where `FORTRESS` is installed, its skills own the discipline for `truth.md`, `motte.md` and
+`bailey.md`, and RAID never touches one that is already there. Kickoff asks the adopter for one
+fact they can hand a stranger a source for, checks it against that source, and writes it to
+`truth.md` — that single sourced fact is what opens stage one. An adopter with nothing sourceable
+yet stays at stage zero and is told exactly why. `numbers.md` is the one file no skill ever writes
+a row into afterward; only a human or a companion holding real credentials does. Nothing ships
+pre-filled; a template with plausible-looking example pains, facts or competitors would be exactly
+the invented-evidence problem RAID exists to avoid.
 
 Every skill here runs on built-in tools alone — WebSearch, WebFetch, Read/Write/Edit, Glob/Grep,
 Bash. `companions.json` ships with an empty `companions` array: no accelerant for any RAID skill

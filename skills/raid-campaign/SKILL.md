@@ -11,7 +11,7 @@ Never fight where the money wins. This skill turns that doctrine into a sequence
 
 Read whatever `.monkeys/` files exist — `truth.md`, `motte.md`, `bailey.md`, `recon.md`, `asymmetry.md`, `scars.md`, `numbers.md`, and any prior files under `.monkeys/briefings/` — and from what they actually say, work out which of five stages is open. Write that to `campaign.md`.
 
-`truth.md`, `motte.md`, and `bailey.md` are written by FORTRESS skills where FORTRESS is installed. This skill only reads them and works the same with or without FORTRESS present — a missing file reads exactly the same as an empty one (see section 3). Nothing here requires FORTRESS to be installed.
+`truth.md`, `motte.md`, and `bailey.md` are created empty by `raid`'s kickoff wherever they are absent, and where FORTRESS is installed its skills — `fortress-truth`, `fortress-motte`, `fortress-bailey` — own the discipline for them and fill them. Whoever arrives first creates the file; each plugin owns the discipline for its own files. This skill only reads them, and works the same with or without FORTRESS present: a missing file reads exactly the same as an empty one (see section 3). **Nothing here requires FORTRESS to be installed, and nothing here is unreachable without it** — a RAID-only adopter with one cleared fact in `truth.md` opens stage 1, because kickoff put the file there and asked them for the fact.
 
 **The plan is derived from the pack, never from a template.** There is no default week-one, week-two schedule waiting to be filled in with the adopter's name on it. If `recon.md` names one room and `truth.md` has one cleared fact, the campaign is one room and one fact — short, because that is what is actually true, not because less work was done. A campaign that reads the same for every adopter would mean the pack was never read. **If the pack is thin, the campaign is short. That is correct, not a failure to fix by inventing more.**
 
@@ -30,6 +30,8 @@ The order is not a preference. There is no standing to earn before the pack exis
 | 4 | Prune | Kill what produced nothing. Double down on what did. |
 
 Everyone starts at stage 0. It has no gate — building the pack and standing up cold accounts requires nothing to be true first. Every stage after it does.
+
+**Stage 0's "stand up owned assets" has no owning skill in RAID, and naming a fake one would be worse than saying so.** Where FORTRESS is present, `fortress-motte` owns it. Where it is not, it is the adopter's own work — buying the domain, opening the list, standing up the page — recorded by them under `motte.md`'s `## Held` once it exists. Write it into **Open now** with `skill: fortress-motte` where FORTRESS is installed, and `skill: none — the adopter's own work, recorded in motte.md` where it is not. Every other stage-0 action does have a RAID sibling: the pack itself is `raid-recon` and `raid-asymmetry`.
 
 ## 3. The gates
 
@@ -55,7 +57,9 @@ Part of stage 3's gate, and stated on its own because it is the one most often s
 > Before driving traffic anywhere, confirm a stranger can complete the action end to end — download, install, buy, sign up, receive what they paid for. Ask the adopter directly and record the answer.
 > **A campaign that succeeds into a broken delivery path costs more than one that never ran.** The traffic is spent, the standing is spent, and the person who tried is gone. If delivery is unverified, stage 3 stays closed and the unmet condition is named in `campaign.md`.
 
-Ask the question directly, every run. Don't infer a "yes" from a prior session's answer, and don't infer it from the product looking finished — a build that compiles is not the same claim as a stranger actually receiving what they paid for.
+**Ask the question directly, out loud, on every single run. There is no condition under which a run skips it.** Don't infer a "yes" from a prior session's answer, don't infer it from the recorded line in `campaign.md`, and don't infer it from the product looking finished — a build that compiles is not the same claim as a stranger actually receiving what they paid for. A delivery path that worked last month can be broken today: a payment processor deactivates, a domain lapses, a download link rots, a fulfilment step nobody re-tested silently stops. **`campaign.md`'s `Delivery check` line is a log of the last answer and its date. It is never a substitute for asking.** Read it if you like — then ask anyway, and record what you are told this run, even when the answer is identical to last run's.
+
+Of every condition in the gate table, this is the only one that is not a file read — which makes it the only one that can be quietly softened without a grep ever catching it. That is why it is asked every run rather than cached.
 
 ## 5. Refusal
 
@@ -82,6 +86,8 @@ On every run, read whatever files exist under `.monkeys/briefings/`. Compare wha
 
 If no briefings exist yet, there is nothing to compare. Say that, and move on.
 
+**The observation goes in `campaign.md` under `## Drift`, as a dated line** — see the shape in section 8. It has to be written down, because a count that spans sessions cannot be recomputed from a single session: the whole claim is about a run of them. Say it to the adopter and record it, both. A drift observation that only ever lives in one conversation is exactly the comfortable-work problem in another form — noticed, agreed with, and gone by the next run.
+
 ## 7. Blocked on a human
 
 Some things cannot be unblocked by work: a pricing decision, a legal question, an unresolved question about what may actually be sold or promised. When the pack or the conversation surfaces one of these, record it in `campaign.md` under its own heading — **Blocked on a human decision** — naming exactly what it blocks.
@@ -90,7 +96,7 @@ Some things cannot be unblocked by work: a pricing decision, a legal question, a
 
 ## 8. Writing `campaign.md`
 
-Before writing, check whether `campaign.md` already exists. If it does, read it first. **Override records and every entry under `## Blocked on a human decision` are carried forward into the new file, never dropped.** An override record is permanent: it documents that a gate was crossed early and on whose instruction, and a record that disappears the next time this skill runs is worse than no record at all — it reads as though the gate was never crossed. Regenerate every other section fresh from the current pack state; only those two carry forward untouched.
+Before writing, check whether `campaign.md` already exists. If it does, read it first. **Override records, every entry under `## Blocked on a human decision`, and every dated line already under `## Drift` are carried forward into the new file, never dropped.** An override record is permanent: it documents that a gate was crossed early and on whose instruction, and a record that disappears the next time this skill runs is worse than no record at all — it reads as though the gate was never crossed. A drift line is permanent for the same reason and carries forward the same way: section 6's count is a claim about consecutive sessions, and a section that only ever shows the latest run cannot show a run of anything. This run's drift observation is **appended** as a new dated line under the ones already there; earlier lines are left exactly as they are, never rewritten to match today's reading. Regenerate every other section fresh from the current pack state; only those three carry forward untouched.
 
 Write `.monkeys/campaign.md` at the adopter's repo root, in exactly this shape — this is a contract `raid-briefing` reads:
 
@@ -112,11 +118,14 @@ Write `.monkeys/campaign.md` at the adopter's repo root, in exactly this shape �
 
 ## Blocked on a human decision
 - <decision> — why it blocks: <what cannot proceed> — who: <the adopter>
+
+## Drift
+- <YYYY-MM-DD> — <section 6's observation for that run, with its count and the open action next to it, or: no briefings yet — nothing to compare against>
 ```
 
-`Delivery check` records the answer to the question in section 4 the moment it is asked — confirmed or not — so a later run reads this line instead of asking blind. Re-ask only when it still reads `not yet asked`, or `unverified` and nothing has changed since.
+`Delivery check` records the answer to the question in section 4 the moment it is asked — confirmed or not — **as a log of the last answer and the date it was given, and nothing more.** It is not a cache, and reading it is not a substitute for asking. Section 4's rule is unconditional: the question is put to the adopter on every run, and this line is overwritten with what they say this run, even when the answer is word for word what it was last time. A run that writes this line without having asked has recorded a fact it did not check.
 
-Every bullet under **Open now** names a real action drawn from what's actually in the pack — which specific room from `recon.md` to enter next, which specific asset to build — never the stage table's one-line description restated as if restating it were an action. `skill:` names the sibling that actually does it, `raid-*` or, where FORTRESS is present, `fortress-*`, so the founder knows where to go, not just what to do. `done when:` is a condition checkable against the pack next run — the same discipline the gates themselves use, not a feeling of being finished.
+Every bullet under **Open now** names a real action drawn from what's actually in the pack — which specific room from `recon.md` to enter next, which specific asset to build — never the stage table's one-line description restated as if restating it were an action. `skill:` names the sibling that actually does it, `raid-*` or, where FORTRESS is present, `fortress-*`, so the founder knows where to go, not just what to do. The one action that has no RAID sibling is stage 0's owned asset — write it exactly as section 2 specifies, `skill: fortress-motte` where FORTRESS is installed and `skill: none — the adopter's own work, recorded in motte.md` where it is not. Naming a skill that would not actually do it sends the founder somewhere that cannot help them, which is worse than naming none. `done when:` is a condition checkable against the pack next run — the same discipline the gates themselves use, not a feeling of being finished.
 
 ## 9. What this does not do
 
