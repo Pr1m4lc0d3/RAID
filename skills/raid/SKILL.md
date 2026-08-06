@@ -190,7 +190,7 @@ Steps, in order:
 
    ## Wanted
 
-   <!-- - <asset not yet built> — why it matters -->
+   <!-- - <asset not yet built> — why: <what it would let you do> -->
    ```
 
    Leave it empty. Standing up an owned asset is stage 0 work and nothing in RAID performs it — see the routing note in `raid-campaign` section 2. If the file is already there, leave it exactly as it is and say so in the report; where `FORTRESS` is installed, `fortress-motte` owns this file's discipline.
