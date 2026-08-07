@@ -1,11 +1,11 @@
 ---
 name: raid
-description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the eight focused sub-skills.
+description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the nine focused sub-skills.
 ---
 
 # raid
 
-This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the eight focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
+This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the nine focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
 
 ## 1. The doctrine
 
@@ -60,7 +60,7 @@ State this plainly before starting, and mean it: **nothing here is pre-filled.**
 Two roots are in play throughout these steps:
 
 - **Plugin root** — where this plugin is installed. Address it with `${CLAUDE_PLUGIN_ROOT}`; the capability report in section 6 reads `companions.json` from here.
-- **Adopter's repo root** — the directory you are working in. Every file you *write* — `.monkeys/recon.md`, `.monkeys/asymmetry.md`, and, each only where it is absent, `.monkeys/truth.md`, `.monkeys/motte.md`, `.monkeys/bailey.md`, `.monkeys/scars.md` and `.monkeys/numbers.md`, plus `.monkeys/sell-kit.md` where a Sell-Kit was imported — is relative to it.
+- **Adopter's repo root** — the directory you are working in. Every file you *write* — `.monkeys/recon.md`, `.monkeys/asymmetry.md`, and, each only where it is absent, `.monkeys/truth.md`, `.monkeys/motte.md`, `.monkeys/bailey.md`, `.monkeys/scars.md`, `.monkeys/numbers.md` and `.monkeys/voice.md`, plus `.monkeys/sell-kit.md` where a Sell-Kit was imported — is relative to it.
 
 **The pack is the interface, not the plugin.** `raid-campaign`'s gates read `truth.md`, `motte.md` and `bailey.md`, and a missing file reads the same as an empty one — so an adopter who installs RAID alone and has none of those files is pinned at stage 0 with nothing in RAID able to change it. Kickoff therefore creates every pack file RAID's own gates read, **only where it is absent**. Whoever arrives first creates a file; each plugin owns the *discipline* for its own files; neither is blocked by the other's absence.
 
@@ -237,7 +237,32 @@ Steps, in order:
 
     `Kind` is `motte` or `bailey`. The distinction exists because rented attention is not something a founder can prune toward.
 
-11. **Write `.monkeys/sell-kit.md` — only where a Sell-Kit was imported in step 1.** This is where the kit's pre-build test lands, and it is a separate file for a reason worth stating: **it does not go into `campaign.md`.** `raid-campaign` regenerates every section of that file fresh from the pack on each run, carrying forward only override records, blocked-on-a-human entries and dated drift lines — so a first objective written there by kickoff would be silently erased the first time a campaign was planned. Write it here instead, and hand this file to `raid-campaign` when planning: `The ask` becomes the campaign's first objective, `PASS if` and `KILL if` become its kill criteria, `By when` is the date that objective is checked against, `Commitment signal` defines what counts as a real row in `numbers.md`, and `Stop condition` feeds stage 4 — the prune. If the file already exists, read it back to the adopter and ask whether to replace it; a kit imported earlier may have been acted on since.
+11. **Write `.monkeys/voice.md` — only if it does not already exist** (adopter's repo root). `raid-draft` reads this file: without it every draft reads like nobody, in a house style the agent made up. Structure only, placeholder comments only, nothing pre-filled:
+
+    ```markdown
+    # Voice — how this brand sounds
+
+    ## Sounds like
+
+    <!-- - <a quality> — because: <why it fits this buyer> -->
+
+    ## Never says
+
+    <!-- A word or move recorded here stays out of every draft, including the one where it -->
+    <!-- would have been the strongest line. The reason is what makes that hold. -->
+    <!-- - <a word or move to avoid> — because: <why it costs you> -->
+
+    ## Proof available
+
+    <!-- Only things that EXIST: a screenshot, an install log, a benchmark, a repo, a -->
+    <!-- recording. Not something you intend to make — a proof asset nobody has made yet -->
+    <!-- cannot be shown to anybody. -->
+    <!-- - <a concrete proof asset you actually have> — shows: <what it demonstrates> -->
+    ```
+
+    Leave it empty. **No example adjectives, and no starter list of banned words** — a voice is the adopter's, and a plausible-sounding one written in for them is the invented-evidence problem applied to tone instead of to facts. An empty voice file is honest, and `raid-draft` handles it correctly: it says the draft has no voice guidance rather than inventing a style. If the file is already there, leave it exactly as it is and say so in the report.
+
+12. **Write `.monkeys/sell-kit.md` — only where a Sell-Kit was imported in step 1.** This is where the kit's pre-build test lands, and it is a separate file for a reason worth stating: **it does not go into `campaign.md`.** `raid-campaign` regenerates every section of that file fresh from the pack on each run, carrying forward only override records, blocked-on-a-human entries and dated drift lines — so a first objective written there by kickoff would be silently erased the first time a campaign was planned. Write it here instead, and hand this file to `raid-campaign` when planning: `The ask` becomes the campaign's first objective, `PASS if` and `KILL if` become its kill criteria, `By when` is the date that objective is checked against, `Commitment signal` defines what counts as a real row in `numbers.md`, and `Stop condition` feeds stage 4 — the prune. If the file already exists, read it back to the adopter and ask whether to replace it; a kit imported earlier may have been acted on since.
 
     ```markdown
     # Sell-Kit — the founder's own pre-build test
@@ -256,7 +281,7 @@ Steps, in order:
     - Stop condition: <what stops the whole line of work>
     ```
 
-12. **Report back** what was written, and state plainly that every pain traces to something the adopter said or something independently found in public, and every asymmetry claim traces to a fetched pricing or plans page — nothing was invented to fill space. Name each file that was created and each file that was found already present and left alone. Say which stage the pack now makes reachable: with one cleared fact, stage 1 is open to `raid-campaign`; with none, the answer is stage 0 and the reason is that nothing has been sourced yet. Where a Sell-Kit was imported, report it in the same breath: what was imported, what was placed under **Uncleared** and the reason for each, and what still needs research — the rooms nobody has read yet, and every incumbent whose revenue model is still `unknown — not verified`.
+13. **Report back** what was written, and state plainly that every pain traces to something the adopter said or something independently found in public, and every asymmetry claim traces to a fetched pricing or plans page — nothing was invented to fill space. Name each file that was created and each file that was found already present and left alone. Say which stage the pack now makes reachable: with one cleared fact, stage 1 is open to `raid-campaign`; with none, the answer is stage 0 and the reason is that nothing has been sourced yet. Where a Sell-Kit was imported, report it in the same breath: what was imported, what was placed under **Uncleared** and the reason for each, and what still needs research — the rooms nobody has read yet, and every incumbent whose revenue model is still `unknown — not verified`.
 
 ## 6. Capability report
 
@@ -275,6 +300,7 @@ As shipped, `companions.json` is empty — RAID needs no add-ons to produce any 
 | Reacting to news, timing a launch, or deciding whether now is the moment | `raid-moment` |
 | Looking for an audience, or considering a podcast, newsletter, or community | `raid-borrow` |
 | Having made one asset, planning content, or wanting more output without more work | `raid-multiply` |
+| Writing the post, drafting the comment, making the launch copy, turning something into a thread, or writing the email or a landing section | `raid-draft` |
 | Planning a campaign, asking what to do first, or asking what comes next | `raid-campaign` |
 | Asking for a daily briefing, or what to work on today | `raid-briefing` |
 
@@ -288,4 +314,4 @@ Where FORTRESS **is** present, its claim discipline binds every RAID output with
 
 ## 9. Built-ins only
 
-Every skill in this plugin — this one and all eight it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 6's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function.
+Every skill in this plugin — this one and all nine it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 6's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function.

@@ -63,19 +63,20 @@ would be exactly the overclaiming this whole system exists to refuse.
 
 | Skill | Job |
 |---|---|
-| **`raid`** | Front door: doctrine, the target gate, one-time kickoff that generates a recon-and-asymmetry pack (`.monkeys/recon.md`, `.monkeys/asymmetry.md`) from the adopter's own product and market and creates every other pack file RAID's own gates read — `truth.md`, `motte.md`, `bailey.md`, `scars.md`, `numbers.md` — empty, and only where none exists yet. Capability report, routing to the eight skills below. |
+| **`raid`** | Front door: doctrine, the target gate, one-time kickoff that generates a recon-and-asymmetry pack (`.monkeys/recon.md`, `.monkeys/asymmetry.md`) from the adopter's own product and market and creates every other pack file RAID's own gates read — `truth.md`, `motte.md`, `bailey.md`, `scars.md`, `numbers.md`, `voice.md` — empty, and only where none exists yet. Capability report, routing to the nine skills below. |
 | **`raid-recon`** | Who hurts, captured in their own words, and where they gather. Records a room's rules and entry cost, not just its audience size — and marks anything unconfirmed `verified: no` rather than dropping it or guessing at it. Captured quotes are internal research, never republished as copy and never attributed to a named person in public. |
 | **`raid-asymmetry`** | Reads an incumbent's own revenue model from their own pricing or plans page and derives what that model structurally forbids them to say. Internal ammunition only — `asymmetry.md` is never published, and naming a rival in public copy is a RAID violation in its own right, binding on a RAID-only install and enforced by `FORTRESS` as well where that is installed. |
 | **`raid-stunt`** | The disproportionate play, filtered by the carry test: name the person who repeats it and why repeating it serves them, or don't build it. Holds a hard floor first — nothing unlawful, no hoaxes or impersonation, nothing that could read as a real emergency, no breach of a platform's terms — then rejects plays that insult the audience they need, would embarrass if they worked, or require a budget to be noticed. |
 | **`raid-moment`** | Ambush timing: rides attention already in motion instead of manufacturing it, refuses to ride a tragedy, and lets a moment pass rather than publish an unverified claim to catch it. |
 | **`raid-borrow`** | Finds a room that already has an audience and pays for standing in it with usefulness offered in advance — never a drop-and-pitch. Discloses a material connection in the same message it's mentioned, one account per person per platform, and nothing copy-pasted across rooms. |
 | **`raid-multiply`** | Cuts one substantial asset into many standalone pieces. Every cut has to make sense on its own, with no assumed context from the source. A cut inherits the source's licence, rights and consent. Decides and drafts the cuts; rendering is the last mile and needs no specific tool. |
+| **`raid-draft`** | Writes the actual copy — post, comment, thread, email, landing section — and hands back a complete unit: the draft, a claim map tracing every factual sentence to a cleared line, what it deliberately could not say and why, the destination room's rules and this account's standing, and a human send checklist. Invents no number, testimonial, name or statistic; names no rival; carries no link where the account's `links allowed:` is `no`; and says the draft has no voice guidance rather than inventing a house style. |
 | **`raid-campaign`** | Reads whatever `.monkeys/` pack exists and works out, by checking four ordered gates across five stages rather than guessing, which stage of the work is actually open — then writes that decision to `.monkeys/campaign.md` so the next session doesn't re-decide from a blank page. |
 | **`raid-briefing`** | Reads the pack, `campaign.md`, prior briefings, and `numbers.md` — never fetches anything — and writes today's four-block slice (moved, today, blocked, rot) to `.monkeys/briefings/<date>.md`, capped at three actions so it stays readable in under two minutes. |
 
 ## The campaign-and-briefing loop
 
-`raid-campaign` and `raid-briefing` close a loop on top of the six plays above. `raid-campaign`
+`raid-campaign` and `raid-briefing` close a loop on top of the seven plays above. `raid-campaign`
 reads the whole `.monkeys/` pack and turns it into the stage-gated sequence — which of five stages
 is actually open, checked against the pack rather than assumed. `raid-briefing` reads that sequence
 back and hands over today's slice of it: what moved, what to do today, what's blocked, and what's
@@ -95,9 +96,12 @@ Or point the marketplace command at wherever this repository is checked out loca
 run kickoff — it interviews the adopter about their own product and market and generates the
 `.monkeys/recon.md` and `.monkeys/asymmetry.md` pack from scratch. It also creates, **only where
 the repo doesn't already have them**, every other file `raid-campaign`'s gates read: an empty
-`.monkeys/truth.md`, `.monkeys/motte.md`, `.monkeys/bailey.md`, `.monkeys/scars.md` and
-`.monkeys/numbers.md`. That is what makes a RAID-only install usable rather than pinned at stage
-zero — the gates read the pack, so the pack has to exist. Whoever arrives first creates a file;
+`.monkeys/truth.md`, `.monkeys/motte.md`, `.monkeys/bailey.md`, `.monkeys/scars.md`,
+`.monkeys/numbers.md` and `.monkeys/voice.md`. That is what makes a RAID-only install usable rather
+than pinned at stage zero — the gates read the pack, so the pack has to exist. `voice.md` ships
+empty for the same reason nothing else is pre-filled: an invented house style is a fabrication that
+merely fails less visibly than an invented statistic, and `raid-draft` says a draft has no voice
+guidance rather than making one up. Whoever arrives first creates a file;
 where `FORTRESS` is installed, its skills own the discipline for `truth.md`, `motte.md` and
 `bailey.md`, and RAID never touches one that is already there. Kickoff asks the adopter for one
 fact they can hand a stranger a source for, checks it against that source, and writes it to
