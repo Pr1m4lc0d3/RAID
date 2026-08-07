@@ -1,0 +1,1 @@
+Every batch ferments for at least 21 days before bottling — no shortcuts. If anyone here has fought with lacto-fermented hot sauce separating in the bottle, I'd like to compare notes; that's the thing I've been chasing consistency on this month.
