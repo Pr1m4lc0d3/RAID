@@ -10,6 +10,10 @@ fortress that never raids starves. Neither half is the *whole doctrine*, and nei
 carries restraint (the loudest play is the one most likely to get you banned), `FORTRESS` carries
 aggression (an asset you never spend is hoarding, not strategy).
 
+**The other half: [`FORTRESS`](https://github.com/Pr1m4lc0d3/FORTRESS).** Both halves, plus a
+browser console that reads the same pack, are described at
+[ryan-heltemes.com/mavericks-monkeys.html](https://ryan-heltemes.com/mavericks-monkeys.html).
+
 **`FORTRESS` is released.** It ships standalone — every skill in it runs without RAID installed.
 This repository ships `RAID`, the other half of the pair: where `FORTRESS` holds ground, `RAID`
 takes it. Each plugin is a complete, independently useful tool on its own — installed alone, either
