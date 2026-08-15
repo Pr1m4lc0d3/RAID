@@ -1,17 +1,17 @@
 ---
 name: raid
-description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the nine focused sub-skills.
+description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the ten focused sub-skills.
 ---
 
 # raid
 
-This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the nine focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
+This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the ten focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
 
 ## 1. The doctrine
 
 Never fight where the money wins.
 
-One test generates the entire target list. Ads? Money wins — stay out. Head SEO terms? Money wins. Paid placement, sponsorships, booths, influencer rates? Money wins. So *where doesn't it?* Surprise, timing, niche depth, trust, weirdness, physical space, and being genuinely useful in a room you don't own.
+One test generates the entire target list. Ads? Money wins — stay out. Head SEO terms? Money wins. Paid placement, sponsorships, booths, influencer rates? Money wins. So *where doesn't it?* Surprise, timing, niche depth, trust, weirdness, physical space, being genuinely useful in a room you don't own, and the **organic citation** inside an AI answer, whose price is proof rather than budget.
 
 RAID is the offensive half of guerrilla marketing for AI agents. It doesn't tell you what to hold on to — that's the defense half, `FORTRESS`. It tells you where a small force can actually win, and where showing up is just money you don't have competing with money you'll never match.
 
@@ -45,6 +45,7 @@ Before committing effort to any play, run this gate in order:
 | If this works, **who carries it for free?** | `raid-stunt` |
 | Is attention already in motion I can ride instead of manufacturing? | `raid-moment` |
 | Does this room already have the audience, so I don't have to build one? | `raid-borrow` |
+| Would the buyer ask an agent instead of searching, and can it defend me? | `raid-cite` |
 | Does this asset already exist in another form? | `raid-multiply` |
 | Is this stage even open yet? | `raid-campaign` |
 | Is this a draft a **human** sends — or am I about to send it myself? If I am sending, stop. | `raid` |
@@ -299,6 +300,7 @@ As shipped, `companions.json` is empty — RAID needs no add-ons to produce any 
 | Designing a launch, or wanting attention without a budget | `raid-stunt` |
 | Reacting to news, timing a launch, or deciding whether now is the moment | `raid-moment` |
 | Looking for an audience, or considering a podcast, newsletter, or community | `raid-borrow` |
+| Getting found by ChatGPT, Perplexity, Claude or Gemini; AI search; answer-engine optimisation; being cited rather than ranked | `raid-cite` |
 | Having made one asset, planning content, or wanting more output without more work | `raid-multiply` |
 | Writing the post, drafting the comment, making the launch copy, turning something into a thread, or writing the email or a landing section | `raid-draft` |
 | Planning a campaign, asking what to do first, or asking what comes next | `raid-campaign` |
