@@ -1,11 +1,11 @@
 ---
 name: raid
-description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the ten focused sub-skills.
+description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the eleven focused sub-skills.
 ---
 
 # raid
 
-This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the ten focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
+This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the eleven focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
 
 ## 1. The doctrine
 
@@ -301,6 +301,7 @@ As shipped, `companions.json` is empty — RAID needs no add-ons to produce any 
 | Reacting to news, timing a launch, or deciding whether now is the moment | `raid-moment` |
 | Looking for an audience, or considering a podcast, newsletter, or community | `raid-borrow` |
 | Getting found by ChatGPT, Perplexity, Claude or Gemini; AI search; answer-engine optimisation; being cited rather than ranked | `raid-cite` |
+| Needing the whole strategy as one printable document to hand to a partner, contractor or advisor | `raid-dossier` |
 | Having made one asset, planning content, or wanting more output without more work | `raid-multiply` |
 | Writing the post, drafting the comment, making the launch copy, turning something into a thread, or writing the email or a landing section | `raid-draft` |
 | Planning a campaign, asking what to do first, or asking what comes next | `raid-campaign` |

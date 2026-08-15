@@ -27,6 +27,7 @@
     "./skills/raid-multiply",
     "./skills/raid-draft",
     "./skills/raid-campaign",
+    "./skills/raid-dossier",
     "./skills/raid-briefing"
   ]
 }
