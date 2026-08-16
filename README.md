@@ -161,3 +161,15 @@ The honest pitch is narrower than "this will get you customers," and it's this i
 encodes what the failures cost, so you can skip paying for them.** The doctrine, the target gate,
 and `scars.md` exist because specific mistakes were expensive to learn once. Adopting RAID doesn't
 promise growth — it removes the cost of relearning those mistakes the hard way.
+
+---
+
+## Where this came from
+
+Deliberon is a Windows desktop app that runs a council of AI agents on a hard decision and hands back a Decision Record: dissent preserved, every claim marked as proved, asserted, or estimated.
+
+RAID is the marketing method built to sell it, published in full because a method you cannot read is a method you cannot check.
+
+Pay once, it's yours, no subscription. Thirty days of the full council with no account and no card. Runs on your machine with your own model keys.
+
+https://deliberon.com
