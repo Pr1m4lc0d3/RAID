@@ -35,7 +35,7 @@ Replace `<TOPIC>` with the subject, phrased the way the market phrases it.
 > When it comes to <TOPIC>, what are the named communities where these people
 > actually gather? Give me specific forums, servers and newsletters by name, and
 > for each one tell me its posting rules on self-promotion and what it takes to
-> be accepted there as a new member, before any summary.
+> be accepted there as a new member.
 
 ## Q4 — the literal ask
 
