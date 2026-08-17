@@ -19,6 +19,9 @@ product and market are fictional; the failure modes are not.
 > "honestly the packaging is the whole product" — @crumbco, 4 Aug 2026,
 > https://example.test/crumbco/status/2
 >
+> "drop a comment and I'll send you my full bakery shortlist" — @loafhunter, 5 Aug 2026,
+> https://example.test/loafhunter/status/3
+>
 > Bread lovers gather on the big baking forums and on social media. Competing
 > products include LoafBox, CrumbClub and PanaderiaOne.
 >
@@ -50,6 +53,10 @@ product and market are fictional; the failure modes are not.
 - `@crumbco` opens, wording matches, **reach 12**, and the account bio reads
   "artisan packaging for small bakers". **Speaker: vendor.** → filed under
   competitors, **never under pains**.
+- `@loafhunter` opens, wording matches, post shows **4,100 replies** and **3,800
+  reposts**. **gated: yes** because it trades a deliverable (bakery shortlist)
+  for engagement. The reply and repost counts are manufactured by that trade and
+  are not read as interest; reach by view count still stands.
 
 **Walking the thread.** `@a_baker`'s post is a reply. Its root has **51,000
 views** and asks "why do I keep cancelling bread boxes?", with 90 replies
@@ -80,7 +87,7 @@ the end.
 
 The handle and the link are gone. They did their job at verification.
 
-`.monkeys/lexicon.md`:
+Excerpt from `.monkeys/lexicon.md`:
 
 ```markdown
 ## Objections
@@ -89,6 +96,8 @@ The handle and the link are gone. They did their job at verification.
 ## Unanswered
 - why do I keep cancelling bread boxes — asked in: a social platform — reach: 51000
 ```
+
+A complete `.monkeys/lexicon.md` carries all five sections (Vocabulary, Wants, Objections, Unanswered, Demand signals); this excerpt shows only the two sections these findings landed in.
 
 ## The scoreboard
 
