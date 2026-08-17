@@ -1,11 +1,11 @@
 ---
 name: raid
-description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the eleven focused sub-skills.
+description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the twelve focused sub-skills.
 ---
 
 # raid
 
-This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the eleven focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
+This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the twelve focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
 
 ## 1. The doctrine
 
@@ -41,6 +41,7 @@ Before committing effort to any play, run this gate in order:
 |---|---|
 | Does money win on this ground? If yes, walk away. | `raid` |
 | Who exactly hurts here, and in whose words? | `raid-recon` |
+| Did I gather this evidence, or was I handed it? If handed, grade it first. | `raid-intake` |
 | What can the incumbent **structurally not say** because of how they make money? | `raid-asymmetry` |
 | If this works, **who carries it for free?** | `raid-stunt` |
 | Is attention already in motion I can ride instead of manufacturing? | `raid-moment` |
@@ -130,11 +131,13 @@ Steps, in order:
    # Recon — who hurts, and where
 
    ## Pains
-   - <the pain in their own words> — heard in: <where> — verified: <yes|no>
+   - <the pain in their own words> — heard in: <where> — reach: <n|unknown> — verified: <yes|no>
 
    ## Rooms
    - <community or room> — audience: <who is there> — rules: <what they forbid> — entry cost: <what it takes to be welcome>
    ```
+
+   `reach:` is optional: write `unknown` rather than omitting it, and an existing line without it stays valid.
 
 5. **Write `.monkeys/asymmetry.md`** (adopter's repo root), in exactly this shape — this is a contract `raid-asymmetry` reads:
 
@@ -296,6 +299,7 @@ As shipped, `companions.json` is empty — RAID needs no add-ons to produce any 
 |---|---|
 | About to spend effort and unsure whether money already wins on this ground | `raid` |
 | Researching an audience, or finding where a market gathers | `raid-recon` |
+| Handed research you did not gather: a chatbot dump, a pasted transcript, someone else's summary | `raid-intake` |
 | Finding an angle against a competitor, or deciding what to lead with | `raid-asymmetry` |
 | Designing a launch, or wanting attention without a budget | `raid-stunt` |
 | Reacting to news, timing a launch, or deciding whether now is the moment | `raid-moment` |
@@ -317,4 +321,4 @@ Where FORTRESS **is** present, its claim discipline binds every RAID output with
 
 ## 9. Built-ins only
 
-Every skill in this plugin — this one and all nine it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 6's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function.
+Every skill in this plugin — this one and all twelve it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 6's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function. `raid-intake` names the Playwright MCP browser as the way to open a source behind a login wall, and it is the same kind of accelerant: absent it, `raid-intake` still produces its full deliverable, grading every line that browser would have reached as `verified: no` with a reason instead.

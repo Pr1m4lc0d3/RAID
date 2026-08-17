@@ -33,6 +33,26 @@ And the standing itself: **it belongs to the room, not to you.** A good answer i
 
 **And you don't post it — a human does.** Everything this skill produces is a draft for a person to send: the answer, the comment, the guest pitch, the contribution. `raid`'s staging rule binds hardest here, because this is the skill whose output goes straight into someone else's room, where every rule above is enforced by people who did not invite you and owe you nothing.
 
-## 4. What this doesn't decide
+## 4. Measure a room. Never accept a described one.
+
+A description of a room tells you what it is for. It does not tell you whether
+the room cares about your subject, and those come apart constantly: the largest,
+busiest, most obviously-named community in a field can be completely dead on the
+one topic you need, while a room nobody thinks to name carries it at many times
+the rate.
+
+The check costs one search. Search the room for your topic, sort by top, and read
+the vote or reply counts on what comes back. Then compare them against what
+unrelated posts in the same room score. A room whose general posts draw hundreds
+and whose posts on your topic draw single digits is not your room, however
+perfectly its name matches.
+
+Where the same person has posted the same thing to several rooms on the same day,
+you have been handed a controlled experiment. Read it before choosing.
+
+Record the measurement, not the impression: the room, the topic searched, the top
+few scores, and the date.
+
+## 5. What this doesn't decide
 
 `raid-borrow` finds the room and governs how you behave once you're in it. It doesn't decide whether to move fast because a moment is live (`raid-moment`), and it doesn't turn one appearance into many pieces of content — that's `raid-multiply`.
