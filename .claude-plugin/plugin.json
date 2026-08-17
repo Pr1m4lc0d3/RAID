@@ -19,6 +19,7 @@
   "skills": [
     "./skills/raid",
     "./skills/raid-recon",
+    "./skills/raid-intake",
     "./skills/raid-asymmetry",
     "./skills/raid-stunt",
     "./skills/raid-moment",

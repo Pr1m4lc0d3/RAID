@@ -83,7 +83,7 @@ the end.
 
 ```markdown
 ## Pains
-- "the crust never survives shipping, every single time" — heard in: a social platform — verified: yes
+- "the crust never survives shipping, every single time" — heard in: a social platform — reach: 240 — verified: yes
 ```
 
 The handle and the link are gone. They did their job at verification.

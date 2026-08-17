@@ -45,6 +45,8 @@ Capture these while the page is already open, because a line without them mislea
 
 A date off by one day is normal drift. Correct it and move on.
 
+**Only `reach` graduates.** `speaker`, `position` and `gated` are working notes taken while the link is open, not pack fields — nothing in `lexicon.md` or `recon.md` has a place for them. They decide how a line is graded and classified: `speaker` sorts a quote into a pain or into the competitor pile, `position` tells you whether you are looking at the tail of a thread or the root, and `gated` marks a count as manufactured rather than earned. Once that judgment is made, all three are discarded, the same way the handle is discarded — **"The handle never enters the pack"** in section 9 covers them too. `position`'s root link is no exception: it exists to walk the thread in the next step, and once you've walked it, it goes with the rest.
+
 ## 4. Walk the thread
 
 **The highest-yield step in this skill, and the one most easily skipped.** For every candidate from a threaded source, before grading:
@@ -101,19 +103,19 @@ Five tests, each answerable at a source. Nothing enters `asymmetry.md` without t
 # Lexicon — how this market talks, wants and refuses
 
 ## Vocabulary
-- <the term, exactly as used> — heard in: <where> — verified: <yes|no>
+- <the term, exactly as used> — heard in: <where> — verified: <yes, YYYY-MM-DD | no>
 
 ## Wants
-- <what they want, in their words> — because: <the motive given> — verified: <yes|no>
+- <what they want, in their words> — because: <the motive given> — verified: <yes, YYYY-MM-DD | no>
 
 ## Objections
-- <what makes them refuse, in their words> — heard in: <where> — reach: <n|unknown> — verified: <yes|no>
+- <what makes them refuse, in their words> — heard in: <where> — reach: <n|unknown> — verified: <yes, YYYY-MM-DD | no>
 
 ## Unanswered
 - <a question asked in public that nobody answered> — asked in: <where> — reach: <n|unknown>
 
 ## Demand signals
-- <the signal> — measure: <what was counted> — source: <where> — on: <YYYY-MM-DD> — verified: <yes|no>
+- <the signal> — measure: <what was counted> — source: <where> — on: <YYYY-MM-DD> — verified: <yes, YYYY-MM-DD | no>
 ```
 
 Run `python assets/lexicon_lint.py .monkeys/lexicon.md` before handing off. It checks that a line carries the fields a human needs; it cannot and does not judge whether anything is true.
