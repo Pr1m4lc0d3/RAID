@@ -20,6 +20,15 @@ REQUIRED_SECTIONS = (
 
 SECTION_RE = re.compile(r"^##\s+(.+?)\s*$")
 BULLET_RE = re.compile(r"^-\s+(.*\S)\s*$")
+LABEL_RE = re.compile(r"—\s*([a-z][a-z ]*?):", re.IGNORECASE)
+
+SECTION_FIELDS = {
+    "Vocabulary": ("heard in", "verified"),
+    "Wants": ("because", "verified"),
+    "Objections": ("heard in", "reach", "verified"),
+    "Unanswered": ("asked in", "reach"),
+    "Demand signals": ("measure", "source", "on", "verified"),
+}
 
 
 class Finding(NamedTuple):
@@ -46,6 +55,11 @@ def parse_sections(text):
     return sections
 
 
+def field_labels(bullet):
+    """Return the set of ' — label:' field labels present on one bullet."""
+    return {m.group(1).strip().lower() for m in LABEL_RE.finditer(bullet)}
+
+
 def lint_text(text):
     findings = []
     sections = parse_sections(text)
@@ -54,4 +68,16 @@ def lint_text(text):
             findings.append(
                 Finding(0, "error", f"missing required section: {name}")
             )
+    for name, required in SECTION_FIELDS.items():
+        for line_no, bullet in sections.get(name, []):
+            present = field_labels(bullet)
+            for label in required:
+                if label not in present:
+                    findings.append(
+                        Finding(
+                            line_no,
+                            "error",
+                            f"{name}: bullet is missing '{label}:'",
+                        )
+                    )
     return findings
