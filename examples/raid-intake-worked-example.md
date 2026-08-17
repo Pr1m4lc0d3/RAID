@@ -56,7 +56,8 @@ product and market are fictional; the failure modes are not.
 - `@loafhunter` opens, wording matches, post shows **4,100 replies** and **3,800
   reposts**. **gated: yes** because it trades a deliverable (bakery shortlist)
   for engagement. The reply and repost counts are manufactured by that trade and
-  are not read as interest; reach by view count still stands.
+  are not read as interest; reach by view count still stands. Engagement bait,
+  not a customer pain → excluded from pain count.
 
 **Walking the thread.** `@a_baker`'s post is a reply. Its root has **51,000
 views** and asks "why do I keep cancelling bread boxes?", with 90 replies
