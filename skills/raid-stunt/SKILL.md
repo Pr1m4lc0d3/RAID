@@ -36,7 +36,7 @@ And nothing here ships on the agent's own say-so: **`raid` stages, it never publ
 
 Reject a stunt design if it matches any of these:
 
-- **It insults the audience it needs.** A stunt that makes fun of the people you're trying to reach doesn't get carried — it gets reported. The line between "cheeky" and "insulting" is drawn by the room's own norms (see `raid-recon`), not by whether it made your team laugh.
+- **It insults the audience it needs.** A stunt that makes fun of the people you're trying to reach doesn't get carried — it gets reported. The line between "cheeky" and "insulting" is drawn by the room's own norms (see `scout-recon`), not by whether it made your team laugh.
 - **It would embarrass you if it worked.** If going viral is the failure case — because the thing you'd be known for isn't the thing you're selling — don't build it on a bet that it flops quietly instead.
 - **It requires a budget to be noticed.** Paid boosting, paid seeding, paying for placement to make the stunt look organic — that's an ad wearing a stunt's clothes, and money wins there. If the plan only works with a media buy behind it, it isn't a stunt.
 

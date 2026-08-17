@@ -45,7 +45,7 @@ The order is not a preference. There is no standing to earn before the pack exis
 
 Everyone starts at stage 0. It has no gate — building the pack and standing up cold accounts requires nothing to be true first. Every stage after it does.
 
-**Stage 0's "stand up owned assets" has no owning skill in RAID, and naming a fake one would be worse than saying so.** Where FORTRESS is present, `fortress-motte` owns it. Where it is not, it is the adopter's own work — buying the domain, opening the list, standing up the page — recorded by them under `motte.md`'s `## Held` once it exists. Write it into **Open now** with `skill: fortress-motte` where FORTRESS is installed, and `skill: none — the adopter's own work, recorded in motte.md` where it is not. Every other stage-0 action does have a RAID sibling: the pack itself is `raid-recon` and `raid-asymmetry`.
+**Stage 0's "stand up owned assets" has no owning skill in RAID, and naming a fake one would be worse than saying so.** Where FORTRESS is present, `fortress-motte` owns it. Where it is not, it is the adopter's own work — buying the domain, opening the list, standing up the page — recorded by them under `motte.md`'s `## Held` once it exists. Write it into **Open now** with `skill: fortress-motte` where FORTRESS is installed, and `skill: none — the adopter's own work, recorded in motte.md` where it is not. Every other stage-0 action does have a home: the pack itself is `scout-recon` (SCOUT) and `raid-asymmetry` (RAID).
 
 ## 3. The gates
 

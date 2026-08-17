@@ -128,7 +128,7 @@ One complete unit, never a recommendation the human still has to turn into somet
 
 - **It does not publish, and it does not schedule.** See section 8.
 - **It does not design.** Layout, artwork, video and shot lists are not this skill's output; `raid-multiply` cuts an existing asset and decides its formats.
-- **It does not research.** If the pain language is missing from `recon.md`, this skill does not go and invent phrasing for it — route to `raid-recon` and come back. If an incumbent's ground is unread, route to `raid-asymmetry`.
+- **It does not research.** If the pain language is missing from `recon.md`, this skill does not go and invent phrasing for it — route to `scout-recon` and come back. If an incumbent's ground is unread, route to `raid-asymmetry`.
 - **It does not source claims.** It reads the register; it never adds a line to it. Where `FORTRESS` is present, `fortress-truth` owns that.
 
-Route out where the ask is really something else: `raid-recon` where the audience's own words are missing, `raid-multiply` where the ask is "cut this one asset into many", `raid-campaign` where the question is which stage is open, and `raid-borrow` where the question is which room this belongs in at all.
+Route out where the ask is really something else: `scout-recon` where the audience's own words are missing, `raid-multiply` where the ask is "cut this one asset into many", `raid-campaign` where the question is which stage is open, and `raid-borrow` where the question is which room this belongs in at all.

@@ -33,7 +33,7 @@ For those, the agent is a routing event, not an adjudicator. Run `raid-borrow` o
 
 The failure mode here is picking a trust signal off a list because it sounds good. A proof chosen from a menu is a hope. A proof derived from the buyer's own question is a necessity, and the five links below never let you guess.
 
-**Link 1. The market is a question.** Your market does not exist as "solo founders, 25–45." It exists as the exact sentence a buyer speaks to an agent. Write it verbatim. If you cannot write it, you do not have a market yet, you have a hope, and `raid-recon` is the skill that fixes that.
+**Link 1. The market is a question.** Your market does not exist as "solo founders, 25–45." It exists as the exact sentence a buyer speaks to an agent. Write it verbatim. If you cannot write it, you do not have a market yet, you have a hope, and `scout-recon` is the skill that fixes that.
 
 **Link 2. The question carries a criterion.** Every question silently instructs the agent which judgment to apply. Name it.
 
@@ -73,7 +73,7 @@ The test of a correct verifier, and it is a hard one: **would the agent cite thi
 
 ## 3. Steps, in order
 
-1. **Read `.monkeys/recon.md` `## Pains`** for the buyer's phrasing. That file holds their words, not a marketer's paraphrase, which is exactly what Link 1 needs. Nothing there? Stop and route to `raid-recon`. Do not invent a question, and do not write one in the founder's voice: a question you wrote is a question you will be able to answer, which is why it is worthless as a test.
+1. **Read `.monkeys/recon.md` `## Pains`** for the buyer's phrasing. That file holds their words, not a marketer's paraphrase, which is exactly what Link 1 needs. Nothing there? Stop and route to `scout-recon`. Do not invent a question, and do not write one in the founder's voice: a question you wrote is a question you will be able to answer, which is why it is worthless as a test.
 2. **Name the criterion** from the Link 2 table.
 3. **Derive the claim type** from Link 3, then **check `.monkeys/truth.md` `## Cleared` for a fact that carries it.** This is the binding constraint of the whole skill. If no cleared line supports the claim, **the claim is not yours to make yet** and the deliverable is the sourced fact you must go get, not the copy you wanted to write. Where `FORTRESS` is installed, `fortress-truth` owns that file and this skill only reads it.
 4. **Name the verifier** from Link 4 and apply the would-they-cite-it-anyway test in writing.
@@ -105,6 +105,6 @@ Ask the agent the Link 1 question and record the answer as a specification, not 
 
 ## 6. What this doesn't decide
 
-It does not write the public claim: that is copy, bound by `fortress-truth`. It does not pick the room or the community: that is `raid-recon` and `raid-borrow`. It does not decide whether now is the moment to say it: that is `raid-moment`. And it never publishes, because no RAID skill does.
+It does not write the public claim: that is copy, bound by `fortress-truth`. It does not pick the room or the community: that is `scout-recon` and `raid-borrow`. It does not decide whether now is the moment to say it: that is `raid-moment`. And it never publishes, because no RAID skill does.
 
 Full doctrine, including the boundaries, the falsification conditions and the rent-shift argument behind this theater: `doctrine/proof-economy/`.

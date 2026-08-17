@@ -6,7 +6,7 @@ The product: a desktop app that runs a council of AI agents against a decision, 
 
 ## Link 1: the question
 
-The pack had no `recon.md`, so the skill's step 1 fires: **stop and route to `raid-recon`.** That is the correct behaviour and it is worth showing rather than skipping, because it is what most adopters will hit on their first run.
+The pack had no `recon.md`, so the skill's step 1 fires: **stop and route to `scout-recon`.** That is the correct behaviour and it is worth showing rather than skipping, because it is what most adopters will hit on their first run.
 
 What follows is therefore marked for what it is. These are **candidate** questions derived from the founder's own stated thesis about the buyer's pain, not from customer interviews:
 
@@ -53,7 +53,7 @@ That is the cheapest distribution available to this product, and the run found i
 
 ## What the run produced
 
-1. Route to `raid-recon` first. The question is a hypothesis and must come back from three real buyers.
+1. Route to `scout-recon` first. The question is a hypothesis and must come back from three real buyers.
 2. Do **not** build a comparison benchmark. The criterion is Method, and a benchmark answers a question nobody asked.
 3. Get one sourced line into `truth.md` describing the procedure. Nothing publishes before that exists.
 4. The verifier already stands and is already populated. Attach the four published methods to the claim.
