@@ -1,11 +1,11 @@
 ---
 name: raid
-description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the thirteen focused sub-skills.
+description: RAID front door. Never fight where the money wins. Use when starting marketing work with no budget, deciding where to promote something, finding an angle against a competitor, or entering the RAID discipline for the first time — runs kickoff once and routes to the ten focused sub-skills.
 ---
 
 # raid
 
-This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the twelve focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
+This is the front door. It holds the doctrine, the gate you run before committing effort to any play, the one-time kickoff that builds a recon-and-asymmetry pack from the adopter's own product and market, and the routing table to the ten focused skills that do the actual work. Read this once per adoption; route out of it for everything after.
 
 ## 1. The doctrine
 
@@ -40,9 +40,6 @@ Before committing effort to any play, run this gate in order:
 | Measure | Skill |
 |---|---|
 | Does money win on this ground? If yes, walk away. | `raid` |
-| Who exactly hurts here, and in whose words? | `raid-recon` |
-| Did I gather this evidence, or was I handed it? If handed, grade it first. | `raid-intake` |
-| Have I established what this product can prove, before I position it? | `raid-provision` |
 | What can the incumbent **structurally not say** because of how they make money? | `raid-asymmetry` |
 | If this works, **who carries it for free?** | `raid-stunt` |
 | Is attention already in motion I can ride instead of manufacturing? | `raid-moment` |
@@ -104,7 +101,7 @@ Steps, in order:
    - **`What is known` is the only field that arrives already eligible for Cleared**, because that is its own definition inside the kit: facts directly supplied by the founder or independently supported, nothing generated. It still needs a ` — source:` suffix. Where the kit doesn't name one, **ask the adopter**; if they can't name one either, it goes to **Uncleared** instead — ` — reason: no source named`. All of this applies **only where this kickoff is creating `truth.md`**; where the file is already there it is left exactly as it is, and the mapped lines are handed to the adopter in the report instead of written.
    - **Every other field goes to Uncleared unless the claim register grades it A–D.** `Buyer`, `Problem`, `Why now`, `Offer`, `Price`, `Value artifact`, `Channel`, `Intent signal` — all of it. **A price a model proposed is not a fact about the world.**
    - **The `Problem` becomes one `## Pains` entry**, with `heard in: <where the kit says it was heard>` where the kit says, and `heard in: Sell-Kit — not independently found` where it doesn't. **`verified:` is `no` unless the claim register grades that same claim A or B.** The public search in the next step can raise it exactly as it raises any other pain; the kit alone never does.
-   - **Nothing from the kit goes into `## Rooms`. Nothing.** The kit's `Channel` is a channel *type* — "a forum", "a newsletter" — not a named room with rules, an audience and an entry cost. Rooms still require research, and that research is `raid-recon`'s job and the next step's. **Entering a room on assumed rules is how an account gets banned**, and a room invented from a channel type arrives with all three of its fields guessed at once.
+   - **Nothing from the kit goes into `## Rooms`. Nothing.** The kit's `Channel` is a channel *type* — "a forum", "a newsletter" — not a named room with rules, an audience and an entry cost. Rooms still require research, and that research is `scout-recon`'s job and the next step's. **Entering a room on assumed rules is how an account gets banned**, and a room invented from a channel type arrives with all three of its fields guessed at once.
    - **Never infer a revenue model from a kit.** Each incumbent the kit's `Reality status` marks real lands as `revenue model: unknown — not verified` and `therefore cannot say: unknown — follows from the revenue model, not yet fetched`, and stays that way until `raid-asymmetry` fetches that incumbent's own pricing or plans page. Nothing goes under `## Our ground`: it derives from a model nobody has read yet.
 
    Ignore the kit's builder spec entirely — `Acceptance criteria`, `Must nail`, `Out of scope (v1)`. Those describe what to build, not where to fight, and nothing in RAID reads them.
@@ -126,7 +123,7 @@ Steps, in order:
 
    **Check the adopter's one sourceable fact against the source they named**, by WebFetch for a URL or Read for a local document, exactly as an incumbent's pricing is checked against their own page. It clears only if the source actually says it.
 
-4. **Write `.monkeys/recon.md`** (adopter's repo root), in exactly this shape — this is a contract `raid-recon` and every other sibling reads:
+4. **Write `.monkeys/recon.md`** (adopter's repo root), in exactly this shape — this is a contract `scout-recon` and every other sibling reads:
 
    ```markdown
    # Recon — who hurts, and where
@@ -299,9 +296,6 @@ As shipped, `companions.json` is empty — RAID needs no add-ons to produce any 
 | Moment | Skill |
 |---|---|
 | About to spend effort and unsure whether money already wins on this ground | `raid` |
-| Researching an audience, or finding where a market gathers | `raid-recon` |
-| Handed research you did not gather: a chatbot dump, a pasted transcript, someone else's summary | `raid-intake` |
-| Pointing the machine at a new product, or a pack with no supply-side files | `raid-provision` |
 | Finding an angle against a competitor, or deciding what to lead with | `raid-asymmetry` |
 | Designing a launch, or wanting attention without a budget | `raid-stunt` |
 | Reacting to news, timing a launch, or deciding whether now is the moment | `raid-moment` |
@@ -323,4 +317,4 @@ Where FORTRESS **is** present, its claim discipline binds every RAID output with
 
 ## 9. Built-ins only
 
-Every skill in this plugin — this one and all thirteen it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 6's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function. `raid-intake` names the Playwright MCP browser as the way to open a source behind a login wall, and it is the same kind of accelerant: absent it, `raid-intake` still produces its full deliverable, grading every line that browser would have reached as `verified: no` with a reason instead.
+Every skill in this plugin — this one and all ten it routes to — runs on WebSearch, WebFetch, Read/Write/Edit, Glob/Grep, and Bash. Nothing here assumes any other plugin is installed, including FORTRESS. Section 6's capability report exists because an accelerant is worth naming when one happens to be available — not because RAID needs one to function.
