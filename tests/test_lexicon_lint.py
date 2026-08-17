@@ -159,6 +159,17 @@ class TestGradingIntegrity(unittest.TestCase):
         ]
         self.assertEqual(grading, [])
 
+    def test_verified_yes_cannot_borrow_another_fields_date(self):
+        text = (
+            "## Demand signals\n"
+            "- stars still climbing — measure: stars — source: an API — on: 2026-08-17 — verified: yes\n"
+        )
+        messages = [f.message for f in lexicon_lint.lint_text(text)]
+        self.assertIn(
+            "Demand signals: 'verified: yes' needs the YYYY-MM-DD it was checked",
+            messages,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

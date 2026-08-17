@@ -105,7 +105,7 @@ def lint_text(text):
                             f"got '{verified}'",
                         )
                     )
-                elif head == "yes" and not ISO_DATE_RE.search(bullet):
+                elif head == "yes" and not ISO_DATE_RE.search(verified):
                     findings.append(
                         Finding(
                             line_no,
