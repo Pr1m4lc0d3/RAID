@@ -131,11 +131,13 @@ Steps, in order:
    # Recon — who hurts, and where
 
    ## Pains
-   - <the pain in their own words> — heard in: <where> — verified: <yes|no>
+   - <the pain in their own words> — heard in: <where> — reach: <n|unknown> — verified: <yes|no>
 
    ## Rooms
    - <community or room> — audience: <who is there> — rules: <what they forbid> — entry cost: <what it takes to be welcome>
    ```
+
+   `reach:` is optional: write `unknown` rather than omitting it, and an existing line without it stays valid.
 
 5. **Write `.monkeys/asymmetry.md`** (adopter's repo root), in exactly this shape — this is a contract `raid-asymmetry` reads:
 
