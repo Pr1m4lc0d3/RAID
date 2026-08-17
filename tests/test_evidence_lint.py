@@ -76,5 +76,40 @@ class TestRequiredFields(unittest.TestCase):
         self.assertEqual(field_errors, [])
 
 
+class TestGradingIntegrity(unittest.TestCase):
+    def test_field_value_reads_a_value(self):
+        bullet = "a cap — exhibit: f1 — verified: yes, 2026-08-17"
+        self.assertEqual(evidence_lint.field_value(bullet, "exhibit"), "f1")
+
+    def test_field_value_returns_none_when_absent(self):
+        self.assertIsNone(evidence_lint.field_value("plain text", "verified"))
+
+    def test_verified_must_be_yes_or_no(self):
+        text = "## Proven\n- a cap — exhibit: f1 — kind: log — verified: maybe\n"
+        messages = [f.message for f in evidence_lint.lint_text(text)]
+        self.assertIn(
+            "Proven: 'verified:' must be yes or no, got 'maybe'", messages
+        )
+
+    def test_verified_yes_requires_a_date_on_the_line(self):
+        text = "## Proven\n- a cap — exhibit: f1 — kind: log — verified: yes\n"
+        messages = [f.message for f in evidence_lint.lint_text(text)]
+        self.assertIn(
+            "Proven: 'verified: yes' needs the YYYY-MM-DD it was checked", messages
+        )
+
+    def test_verified_yes_with_a_date_is_accepted(self):
+        text = "## Proven\n- a cap — exhibit: f1 — kind: log — verified: yes, 2026-08-17\n"
+        messages = [f.message for f in evidence_lint.lint_text(text)]
+        self.assertNotIn(
+            "Proven: 'verified: yes' needs the YYYY-MM-DD it was checked", messages
+        )
+
+    def test_good_fixture_passes_grading_rules(self):
+        findings = evidence_lint.lint_text(read("evidence-good.md"))
+        grading = [f for f in findings if "must be" in f.message or "needs the" in f.message]
+        self.assertEqual(grading, [])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -27,6 +27,8 @@ SECTION_FIELDS = {
     "Limits": ("bears on",),
 }
 
+ISO_DATE_RE = re.compile(r"\b\d{4}-\d{2}-\d{2}\b")
+
 
 class Finding(NamedTuple):
     line_no: int
@@ -57,6 +59,16 @@ def field_labels(bullet):
     return {m.group(1).strip().lower() for m in LABEL_RE.finditer(bullet)}
 
 
+def field_value(bullet, label):
+    """Return the text of ' — <label>: value', stopping at the next ' — '."""
+    pattern = re.compile(
+        r"—\s*" + re.escape(label) + r":\s*(.*?)(?=\s+—\s|$)",
+        re.IGNORECASE,
+    )
+    match = pattern.search(bullet)
+    return match.group(1).strip() if match else None
+
+
 def lint_text(text):
     findings = []
     sections = parse_sections(text)
@@ -77,4 +89,26 @@ def lint_text(text):
                             f"{name}: bullet is missing '{label}:'",
                         )
                     )
+            if name == "Proven":
+                verified = field_value(bullet, "verified")
+                if verified is not None:
+                    head = verified.split(",")[0].strip().lower()
+                    if head not in ("yes", "no"):
+                        findings.append(
+                            Finding(
+                                line_no,
+                                "error",
+                                f"{name}: 'verified:' must be yes or no, "
+                                f"got '{verified}'",
+                            )
+                        )
+                    elif head == "yes" and not ISO_DATE_RE.search(bullet):
+                        findings.append(
+                            Finding(
+                                line_no,
+                                "error",
+                                f"{name}: 'verified: yes' needs the YYYY-MM-DD "
+                                "it was checked",
+                            )
+                        )
     return findings
