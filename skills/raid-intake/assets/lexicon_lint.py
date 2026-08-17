@@ -22,6 +22,9 @@ SECTION_RE = re.compile(r"^##\s+(.+?)\s*$")
 BULLET_RE = re.compile(r"^-\s+(.*\S)\s*$")
 LABEL_RE = re.compile(r"—\s*([a-z][a-z ]*?):", re.IGNORECASE)
 
+ISO_DATE_RE = re.compile(r"\b\d{4}-\d{2}-\d{2}\b")
+REACH_RE = re.compile(r"^(?:unknown|[\d,]+)$", re.IGNORECASE)
+
 SECTION_FIELDS = {
     "Vocabulary": ("heard in", "verified"),
     "Wants": ("because", "verified"),
@@ -60,6 +63,16 @@ def field_labels(bullet):
     return {m.group(1).strip().lower() for m in LABEL_RE.finditer(bullet)}
 
 
+def field_value(bullet, label):
+    """Return the text of ' — <label>: value', stopping at the next ' — '."""
+    pattern = re.compile(
+        r"—\s*" + re.escape(label) + r":\s*(.*?)(?=\s+—\s|$)",
+        re.IGNORECASE,
+    )
+    match = pattern.search(bullet)
+    return match.group(1).strip() if match else None
+
+
 def lint_text(text):
     findings = []
     sections = parse_sections(text)
@@ -80,4 +93,35 @@ def lint_text(text):
                             f"{name}: bullet is missing '{label}:'",
                         )
                     )
+            verified = field_value(bullet, "verified")
+            if verified is not None:
+                head = verified.split(",")[0].strip().lower()
+                if head not in ("yes", "no"):
+                    findings.append(
+                        Finding(
+                            line_no,
+                            "error",
+                            f"{name}: 'verified:' must be yes or no, "
+                            f"got '{verified}'",
+                        )
+                    )
+                elif head == "yes" and not ISO_DATE_RE.search(bullet):
+                    findings.append(
+                        Finding(
+                            line_no,
+                            "error",
+                            f"{name}: 'verified: yes' needs the YYYY-MM-DD "
+                            "it was checked",
+                        )
+                    )
+            reach = field_value(bullet, "reach")
+            if reach is not None and not REACH_RE.match(reach):
+                findings.append(
+                    Finding(
+                        line_no,
+                        "error",
+                        f"{name}: 'reach:' must be a number or 'unknown', "
+                        f"got '{reach}'",
+                    )
+                )
     return findings

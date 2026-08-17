@@ -89,5 +89,76 @@ class TestRequiredFields(unittest.TestCase):
         self.assertEqual(field_errors, [])
 
 
+class TestGradingIntegrity(unittest.TestCase):
+    def test_field_value_reads_a_value(self):
+        bullet = '"a term" — heard in: a forum — verified: yes, 2026-08-17'
+        self.assertEqual(lexicon_lint.field_value(bullet, "heard in"), "a forum")
+
+    def test_field_value_returns_none_when_absent(self):
+        self.assertIsNone(lexicon_lint.field_value("plain text", "verified"))
+
+    def test_verified_must_be_yes_or_no(self):
+        text = (
+            "## Vocabulary\n"
+            "- a term — heard in: a forum — verified: maybe\n"
+        )
+        messages = [f.message for f in lexicon_lint.lint_text(text)]
+        self.assertIn(
+            "Vocabulary: 'verified:' must be yes or no, got 'maybe'", messages
+        )
+
+    def test_verified_yes_requires_a_date_on_the_line(self):
+        text = (
+            "## Vocabulary\n"
+            "- a term — heard in: a forum — verified: yes\n"
+        )
+        messages = [f.message for f in lexicon_lint.lint_text(text)]
+        self.assertIn(
+            "Vocabulary: 'verified: yes' needs the YYYY-MM-DD it was checked",
+            messages,
+        )
+
+    def test_verified_yes_with_a_date_is_accepted(self):
+        text = (
+            "## Vocabulary\n"
+            "- a term — heard in: a forum — verified: yes, 2026-08-17\n"
+        )
+        messages = [f.message for f in lexicon_lint.lint_text(text)]
+        self.assertNotIn(
+            "Vocabulary: 'verified: yes' needs the YYYY-MM-DD it was checked",
+            messages,
+        )
+
+    def test_reach_must_be_a_number_or_unknown(self):
+        text = (
+            "## Objections\n"
+            "- a gripe — heard in: a forum — reach: lots — verified: no\n"
+        )
+        messages = [f.message for f in lexicon_lint.lint_text(text)]
+        self.assertIn(
+            "Objections: 'reach:' must be a number or 'unknown', got 'lots'",
+            messages,
+        )
+
+    def test_reach_unknown_is_accepted(self):
+        text = (
+            "## Objections\n"
+            "- a gripe — heard in: a forum — reach: unknown — verified: no\n"
+        )
+        messages = [f.message for f in lexicon_lint.lint_text(text)]
+        self.assertEqual(
+            [m for m in messages if "reach:" in m and "missing" not in m], []
+        )
+
+    def test_good_fixture_passes_grading_rules(self):
+        findings = lexicon_lint.lint_text(read("lexicon-good.md"))
+        grading = [
+            f
+            for f in findings
+            if "must be" in f.message or "needs the" in f.message
+        ]
+        self.assertEqual(grading, [])
+
+
 if __name__ == "__main__":
     unittest.main()
