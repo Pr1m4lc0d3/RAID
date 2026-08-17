@@ -7,7 +7,10 @@ checked it. A line that omits those is not wrong; it is uncheckable, which reads
 as settled when it is not.
 """
 
+import argparse
 import re
+import sys
+from pathlib import Path
 from typing import NamedTuple
 
 REQUIRED_SECTIONS = (
@@ -112,3 +115,32 @@ def lint_text(text):
                             )
                         )
     return findings
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        prog="evidence-lint",
+        description="Check .monkeys/evidence-inventory.md carries its required fields.",
+    )
+    parser.add_argument("path", help="path to evidence-inventory.md")
+    args = parser.parse_args(argv)
+
+    path = Path(args.path)
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError as exc:
+        print(f"cannot read {path}: {exc}")
+        return 1
+
+    findings = lint_text(text)
+    if not findings:
+        print(f"{path}: clean")
+        return 0
+
+    for finding in sorted(findings, key=lambda f: (f.line_no, f.message)):
+        print(f"{path}:{finding.line_no}: {finding.level}: {finding.message}")
+    return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

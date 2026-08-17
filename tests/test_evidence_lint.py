@@ -111,5 +111,38 @@ class TestGradingIntegrity(unittest.TestCase):
         self.assertEqual(grading, [])
 
 
+import contextlib  # noqa: E402
+import io  # noqa: E402
+
+
+class TestCli(unittest.TestCase):
+    def run_main(self, name):
+        buffer = io.StringIO()
+        with contextlib.redirect_stdout(buffer):
+            code = evidence_lint.main([str(FIXTURES / name)])
+        return code, buffer.getvalue()
+
+    def test_clean_file_exits_zero(self):
+        code, output = self.run_main("evidence-good.md")
+        self.assertEqual(code, 0)
+        self.assertIn("clean", output)
+
+    def test_dirty_file_exits_one(self):
+        code, _ = self.run_main("evidence-bad.md")
+        self.assertEqual(code, 1)
+
+    def test_dirty_file_prints_path_line_and_message(self):
+        _, output = self.run_main("evidence-bad.md")
+        self.assertIn("evidence-bad.md:", output)
+        self.assertIn("missing 'reason:'", output)
+
+    def test_missing_file_exits_one_with_a_reason(self):
+        buffer = io.StringIO()
+        with contextlib.redirect_stdout(buffer):
+            code = evidence_lint.main([str(FIXTURES / "nope.md")])
+        self.assertEqual(code, 1)
+        self.assertIn("cannot read", buffer.getvalue())
+
+
 if __name__ == "__main__":
     unittest.main()
