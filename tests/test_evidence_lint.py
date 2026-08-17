@@ -38,5 +38,43 @@ class TestSectionParsing(unittest.TestCase):
         self.assertEqual(missing, [])
 
 
+class TestRequiredFields(unittest.TestCase):
+    def test_field_labels_extracts_labels(self):
+        bullet = "a cap — exhibit: f1 — kind: log — verified: no"
+        self.assertEqual(
+            evidence_lint.field_labels(bullet),
+            {"exhibit", "kind", "verified"},
+        )
+
+    def test_field_labels_handles_multiword_label(self):
+        bullet = "a limit — bears on: some claim"
+        self.assertEqual(evidence_lint.field_labels(bullet), {"bears on"})
+
+    def test_proven_bullet_needs_exhibit(self):
+        messages = [f.message for f in evidence_lint.lint_text(read("evidence-bad.md"))]
+        self.assertIn("Proven: bullet is missing 'exhibit:'", messages)
+
+    def test_claimed_bullet_needs_reason(self):
+        messages = [f.message for f in evidence_lint.lint_text(read("evidence-bad.md"))]
+        self.assertIn("Claimed but unproven: bullet is missing 'reason:'", messages)
+
+    def test_limits_bullet_needs_bears_on(self):
+        messages = [f.message for f in evidence_lint.lint_text(read("evidence-bad.md"))]
+        self.assertIn("Limits: bullet is missing 'bears on:'", messages)
+
+    def test_findings_carry_the_offending_line_number(self):
+        findings = [
+            f for f in evidence_lint.lint_text(read("evidence-bad.md"))
+            if "missing 'reason:'" in f.message
+        ]
+        self.assertEqual(len(findings), 1)
+        self.assertGreater(findings[0].line_no, 0)
+
+    def test_good_fixture_has_no_field_errors(self):
+        findings = evidence_lint.lint_text(read("evidence-good.md"))
+        field_errors = [f for f in findings if "missing '" in f.message]
+        self.assertEqual(field_errors, [])
+
+
 if __name__ == "__main__":
     unittest.main()
