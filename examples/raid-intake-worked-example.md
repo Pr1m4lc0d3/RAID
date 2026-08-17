@@ -43,7 +43,7 @@ product and market are fictional; the failure modes are not.
   was seeded. Had nobody asked, it would have read as the market's own words.
 - **Format compliance.** Round 1 carries no quote and no link. Graded lower and
   labelled where used.
-- **Source concentration.** Two quotes, two posts. Reported as two, not as
+- **Source concentration.** Three quotes, three posts. Reported as three, not as
   "several".
 
 **Opening the links.**
