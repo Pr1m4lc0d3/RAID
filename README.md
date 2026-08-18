@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/og-raid.png" alt="RAID — take it. Guerrilla marketing for the Proof Economy." width="100%">
+</p>
+
 # RAID
 
 ### `RAID` takes ground · `FORTRESS` builds what can't be taken
