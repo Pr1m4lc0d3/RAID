@@ -4,14 +4,14 @@
     "name": "Pr1m4lc0d3"
   },
   "metadata": {
-    "description": "RAID — never fight where the money wins. The offensive half of Mavericks Monkey Werx.",
+    "description": "RAID — never fight where the money wins. The offensive half of Maverick's Monkey Werx.",
     "version": "0.6.0"
   },
   "plugins": [
     {
       "name": "raid",
       "source": "./",
-      "description": "Guerrilla marketing for AI agents — take ground. Find the ground an incumbent's revenue model forbids them to hold, design plays someone else will carry for free, and multiply one asset into twenty.",
+      "description": "Take it. Guerrilla marketing for the Proof Economy — never fight where the money wins. Find the ground an incumbent's revenue model forbids them to hold, design plays someone else will carry for free, and multiply one asset into twenty.",
       "version": "0.6.0",
       "author": {
         "name": "Pr1m4lc0d3"
