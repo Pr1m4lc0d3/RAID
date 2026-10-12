@@ -177,5 +177,25 @@ Pay once, it's yours, no subscription. Thirty days of the full council with no a
 
 https://deliberon.com
 
-Also on Agensi, if you would rather install these in one step and have them keep themselves
-updated: https://www.agensi.io/creators/ryan-heltemes
+## On Agensi
+
+Every skill here is sold as its own listing, so you can buy the two you need instead of eleven you
+don't. One install step, and they keep themselves updated.
+
+| Skill | Price | Listing |
+|---|---|---|
+| **RAID** (the front door) | $15 | https://www.agensi.io/skills/raid-never-fight-where-the-money-wins |
+| RAID Asymmetry | $5 | https://www.agensi.io/skills/raid-asymmetry-ground-the-incumbent-can-t-take |
+| RAID Borrow | $7 | https://www.agensi.io/skills/raid-borrow-standing-in-someone-else-s-room |
+| RAID Briefing | $9 | https://www.agensi.io/skills/raid-briefing-what-to-work-on-today |
+| RAID Campaign | $9 | https://www.agensi.io/skills/raid-campaign-five-gated-stages |
+| RAID Cite | $9 | https://www.agensi.io/skills/raid-cite-get-chosen-by-an-ai-assistant |
+| RAID Dossier | $7 | https://www.agensi.io/skills/raid-dossier-the-printable-strategy-document |
+| RAID Draft | $9 | https://www.agensi.io/skills/raid-draft-copy-where-every-fact-traces |
+| RAID Moment | $5 | https://www.agensi.io/skills/raid-moment-ride-attention-already-moving |
+| RAID Multiply | $5 | https://www.agensi.io/skills/raid-multiply-one-asset-many-cuts |
+| RAID Stunt | $7 | https://www.agensi.io/skills/raid-stunt-the-carry-test |
+
+The front door runs kickoff and routes work to the rest, so start there if you are starting cold.
+FORTRESS and SCOUT sit beside this pack on the creator page:
+https://www.agensi.io/creators/ryan-heltemes
