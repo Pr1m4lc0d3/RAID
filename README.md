@@ -176,3 +176,6 @@ RAID is the marketing method built to sell it, published in full because a metho
 Pay once, it's yours, no subscription. Thirty days of the full council with no account and no card. Runs on your machine with your own model keys.
 
 https://deliberon.com
+
+Also on Agensi, if you would rather install these in one step and have them keep themselves
+updated: https://www.agensi.io/creators/ryan-heltemes
