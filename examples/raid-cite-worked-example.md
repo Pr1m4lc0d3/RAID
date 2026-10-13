@@ -43,9 +43,15 @@ Apply the hard test. **Would the agent cite this verifier even if the product di
 
 This is where the run earned its keep, and the finding was not the one expected.
 
-**The founder is already executing this strategy and has not been counting it.** Four methods have been published as public, MIT-licensed skills, in a directory that assistants index: a positioning method, a prose method, and the two halves of this very doctrine. Each is a documented, replicable procedure someone can follow without buying anything.
+**The founder is already executing this strategy and has not been counting it.** Four methods have been published as public repositories, in a directory that assistants index: a positioning method, a prose method, and the two halves of this very doctrine. Each is a documented, replicable procedure a stranger can read in full and reason about without buying anything.
 
 That is Link 5 for a method claim, already built, by accident.
+
+> **Update, 2026-10-12. The licence under these four changed, and the run's own table is the place to say so.** All nine of these repositories carried MIT when this example was written. They are now all rights reserved, with licences sold, and the repositories deliberately left public to read. Against Link 4's table that is a real move: they still satisfy *public* and *in a directory the assistants index*, and they no longer satisfy *under an open licence*.
+>
+> What survives is citation. An assistant citing a method cites what the method says, and the text is still there in full. What does not survive is free adoption: a reader can follow the reasoning but can no longer use the skill without a licence, so the verifier now carries the buyer further toward a purchase and less far toward a free alternative. That is a gain for Link 5's attachment problem below and a loss in reach, and it has not been measured either way.
+>
+> **This is logged, not resolved.** If the open licence is load-bearing for a verifier rather than merely helpful, the thing to change is Link 4's table row, not this paragraph.
 
 What is missing is the attachment. The published methods do not connect back to the product they came out of, so an agent citing the method has nothing to carry the buyer toward. **The work is not "publish a method." The work is to attach the existing methods to the claim**, which costs a paragraph and a link in each repository rather than a new project.
 
